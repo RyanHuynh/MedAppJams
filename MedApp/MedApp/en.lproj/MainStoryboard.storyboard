@@ -511,7 +511,7 @@
         <!--Milestone-->
         <scene sceneID="h8U-I4-gEX">
             <objects>
-                <viewController id="mlR-9W-xED" userLabel="Milestone" sceneMemberID="viewController">
+                <viewController id="mlR-9W-xED" userLabel="Milestone" customClass="Milestones" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o9m-7A-rGY">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -530,14 +530,96 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age(month):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHp-u9-orb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPH-r8-teK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RGU-9Y-gvE"/>
+                                    <constraint firstAttribute="width" constant="93" id="RKz-dF-Iac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqt-aj-mvk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="E1Y-ft-plq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="V">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAge:" destination="mlR-9W-xED" eventType="touchUpInside" id="Rnt-Dq-lme"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-gT-JRo">
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AxF-a5-k4v">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="N1e-yk-svd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mlR-9W-xED" id="una-hr-HfM"/>
+                                            <outlet property="delegate" destination="mlR-9W-xED" id="ME1-8U-x5q"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DX-gQ-fMe">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="iQV-1d-5Ec"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickerDone:" destination="mlR-9W-xED" eventType="touchUpInside" id="leU-Al-txf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="leading" secondItem="4mk-gT-JRo" secondAttribute="leading" type="default" id="ALD-Sl-wBA"/>
+                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OYS-Y4-Ciy"/>
+                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="trailing" secondItem="4mk-gT-JRo" secondAttribute="trailing" type="default" id="RNv-Ke-OEC"/>
+                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" type="default" id="WOo-KF-luF"/>
+                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="leading" secondItem="4mk-gT-JRo" secondAttribute="leading" type="default" id="sd3-ur-Jzm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xqt-aj-mvk" firstAttribute="baseline" secondItem="BHp-u9-orb" secondAttribute="baseline" type="default" id="3Pn-Q7-YpJ"/>
+                            <constraint firstItem="FPH-r8-teK" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="80" id="6kz-bF-vxG"/>
+                            <constraint firstAttribute="bottom" secondItem="4mk-gT-JRo" secondAttribute="bottom" constant="660" id="A7b-Un-oit"/>
+                            <constraint firstItem="Xqt-aj-mvk" firstAttribute="trailing" secondItem="FPH-r8-teK" secondAttribute="trailing" type="default" id="DQA-kK-d0a"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" type="default" id="J4N-sa-5ua"/>
+                            <constraint firstItem="4mk-gT-JRo" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="800" id="JkB-GR-4PE"/>
+                            <constraint firstItem="BHp-u9-orb" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="84" id="Kl8-Pq-90c"/>
+                            <constraint firstItem="Xqt-aj-mvk" firstAttribute="centerY" secondItem="FPH-r8-teK" secondAttribute="centerY" type="default" id="cJe-7X-mNX"/>
+                            <constraint firstItem="4mk-gT-JRo" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="109" id="lzj-GD-ff6"/>
+                            <constraint firstItem="FPH-r8-teK" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="139" id="o5p-Qp-zpN"/>
+                            <constraint firstItem="BHp-u9-orb" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q3k-Lc-2bd"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" type="default" id="ubf-NM-srl"/>
+                            <constraint firstAttribute="trailing" secondItem="4mk-gT-JRo" secondAttribute="trailing" constant="-95" id="udw-uM-3Hi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kmK-Pk-dgc"/>
+                    <connections>
+                        <outlet property="agePicker" destination="AxF-a5-k4v" id="gdU-Ro-oVp"/>
+                        <outlet property="ageTextField" destination="FPH-r8-teK" id="X75-m2-vEB"/>
+                        <outlet property="pickerViewContainer" destination="4mk-gT-JRo" id="uSd-LA-tnc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcA-Ry-3Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -573,6 +655,16 @@
                 <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="Milestones" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Milestones.h"/>
+            <relationships>
+                <relationship kind="action" name="pickerDone:"/>
+                <relationship kind="action" name="showAge:"/>
+                <relationship kind="outlet" name="agePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="ageTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pickerViewContainer" candidateClass="UIView"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -581,7 +673,6 @@
             <relationships>
                 <relationship kind="outlet" name="heightSetting" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="weightSetting" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="wieghtSetting" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
     </classes>
@@ -592,6 +683,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="E2c-CZ-Tbi"/>
-        <segue reference="Vcv-br-Z0X"/>
+        <segue reference="1uY-8z-qdY"/>
     </inferredMetricsTieBreakers>
 </document>
