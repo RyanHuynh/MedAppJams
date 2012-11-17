@@ -27,7 +27,7 @@ static int uniqueId;
 	@synchronized([Model class])
 	{
 		if (!_uniqueModel)
-			[[self alloc] init];
+			//[[self alloc] init];
 		return _uniqueModel;
 	}
 	return nil;
@@ -141,6 +141,16 @@ static int uniqueId;
 
 -(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) heightP: (NSString*) weightP:(int) month
 {
+    if([weightSetting isEqualToString:@"Pound"]){
+        double weightN = [weight doubleValue] * 0.453592;
+        weight = [NSString stringWithFormat:@"%f", weightN];
+    }
+    
+    
+    if([heightSetting isEqualToString:@"Inch"]){
+        double heightN = [weight doubleValue] * 2.54;
+        height = [NSString stringWithFormat:@"%f", heightN];
+    }
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:height forKey:@"height" ];
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:weight forKey:@"weight"];
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:heightP forKey:@"weightP"];
