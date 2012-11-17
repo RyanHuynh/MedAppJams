@@ -241,7 +241,7 @@ static int heightModifier;
 clickedButtonAtIndex:(NSInteger)buttonIndex {
 	NSString *buttonTitle=[alertView buttonTitleAtIndex:buttonIndex];
 	if ([buttonTitle isEqualToString:@"Log in"]) {
-        [self performSegueWithIdentifier:@"toLogin" sender:nil];}
+        [self performSegueWithIdentifier:@"toLogIn" sender:nil];}
 }
 
 

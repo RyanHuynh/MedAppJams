@@ -1,19 +1,21 @@
 //
-//  RecordList.m
+//  LogInList.m
 //  MedApp
 //
-//  Created by Ryan Huynh on 11/16/12.
+//  Created by Ryan Huynh on 11/17/12.
 //  Copyright (c) 2012 Ryan Huynh. All rights reserved.
 //
 
-#import "RecordList.h"
-#define kSectionCount 1;
-@interface RecordList ()
+#import "LogInList.h"
+
+@interface LogInList ()
 
 @end
 
-@implementation RecordList
+@implementation LogInList
 @synthesize list;
+@synthesize name;
+@synthesize gender;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,13 +32,14 @@
     list = [NSMutableArray array];
     for(id key in [[Model uniqueModel] log])
     {
-         [list addObject:[[[[[Model uniqueModel] log] objectForKey:key] objectAtIndex:0] objectForKey:@"name"]];
+        NSString *uniqueID = key;
+        [list addObject:[[[[[Model uniqueModel] log] objectForKey:uniqueID] objectAtIndex:0] objectForKey:@"name"]];
     }
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return kSectionCount;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
@@ -46,14 +49,14 @@
 
 - (NSString *)tableView:(UITableView *)tableView
 titleForHeaderInSection:(NSInteger)section {
-   return @"Record List";
+    return @"Record List";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:@"recordCell"];
+                             dequeueReusableCellWithIdentifier:@"record"];
     
     cell.textLabel.text=[self.list objectAtIndex:indexPath.row];
     return cell;
@@ -68,7 +71,13 @@ titleForHeaderInSection:(NSInteger)section {
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *recordSelected = [list objectAtIndex:[indexPath row]];
     [[Model uniqueModel] selectRecord:recordSelected];
-    [self performSegueWithIdentifier:@"toRecord" sender:nil];
+    [[Model uniqueModel] setLogIn:YES];
+    [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
 }
-
+- (IBAction)createRecord:(id)sender {
+    int genderID = gender.selectedSegmentIndex;
+    [[Model uniqueModel]createNewRecord:name.text :genderID];
+    [[Model uniqueModel] selectRecord:name.text];
+    [[Model uniqueModel] setLogIn:YES];
+   }
 @end

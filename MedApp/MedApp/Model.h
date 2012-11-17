@@ -28,7 +28,7 @@
 -(int) getHeightModifier;
 -(void) setLogin:(BOOL) signal;
 -(BOOL) checkRecord:(NSString*) recordName;
--(void) createNewRecord:(NSString*) newName;
+-(void) createNewRecord:(NSString*) newName:(int) genderInput;
 -(void) selectRecord:(NSString*) recordName;
 -(NSMutableArray*) getRecordForMonth:(int) month;
 @end

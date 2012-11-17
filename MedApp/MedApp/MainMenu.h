@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainMenu : UIViewController
+#import "Model.h"
+@interface MainMenu : UIViewController <UIAlertViewDelegate>
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+- (IBAction)logOut:(id)sender;
 
 @end

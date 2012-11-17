@@ -19,6 +19,7 @@
 static Model* _uniqueModel = nil;
 static int weightModifier;
 static int heightModifier;
+static int uniqueId;
 +(Model *)uniqueModel
 {
 	@synchronized([Model class])
@@ -50,9 +51,11 @@ static int heightModifier;
         heightSetting=@"(Centimeter)";
         weightModifier = 1;
         heightModifier = 1;
+        uniqueId = 1;
         log = [[NSMutableDictionary alloc]init];
-        [self createNewRecord:@"Ryan Awesome"];
-        [self createNewRecord:@"Fantastic Xtina"];
+        [self createNewRecord:@"Ryan Awesome": 0];
+        [self createNewRecord:@"Fantastic Xtina": 1];
+        logIn = NO;
     }
     
 	return self;
@@ -99,30 +102,25 @@ static int heightModifier;
     else
         return false;
 }
--(void) createNewRecord:(NSString*) newName
+-(void) createNewRecord:(NSString*) newName: (int)genderInput
 {
-    NSMutableArray *subRecord = [NSMutableArray array];
-    for(int i = 0; i < 3; i++)
-    {
-        [subRecord addObject:@"1"];
+    NSString *genderS;
+    if (genderInput == 0) {
+        genderS = @"Boy";
     }
-    NSMutableDictionary *newRecord = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
-    subRecord,@"0",
-    subRecord,@"1",
-    subRecord,@"2",
-    subRecord,@"3",
-    subRecord,@"4",
-    subRecord,@"5",
-    subRecord,@"6",
-    subRecord,@"7",
-    subRecord,@"8",
-    subRecord,@"9",
-    subRecord,@"10",
-    subRecord,@"11",
-    subRecord,@"12",
-    nil];
-       
-    [log setObject:newRecord forKey:newName];   
+    else
+        genderS = @"Girl";
+    NSMutableDictionary *monthRecord = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                                        newName,@"name",
+                                        genderS,@"gender",
+                                        nil];
+    NSMutableArray *newRecord = [NSMutableArray array];
+    for(int i = 0; i < 12; i++)
+    {
+        [newRecord addObject:monthRecord];
+    }
+    [log setObject:newRecord forKey:[NSString stringWithFormat:@"%d", uniqueId]];
+    uniqueId++;
 }
 
 -(void) selectRecord:(NSString *)recordName
