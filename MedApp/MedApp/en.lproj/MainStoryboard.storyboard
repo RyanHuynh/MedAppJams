@@ -934,22 +934,19 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Milestone" id="81J-M1-YgZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WyO-uB-N95"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WyO-uB-N95">
+                                            <connections>
+                                                <segue destination="MMi-fB-8aZ" kind="modal" id="1by-Ti-MJO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age(months):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-ai-Gvh">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-ai-Gvh">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-bL-R5Y">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="TKk-Hz-FOi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-UI-hsF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="BA8-aj-W3r"/>
@@ -1000,23 +997,28 @@
                                     <constraint firstItem="Hok-k2-KXS" firstAttribute="centerX" secondItem="snp-3L-Nc7" secondAttribute="centerX" type="default" id="MRQ-uT-vzp"/>
                                     <constraint firstItem="Hok-k2-KXS" firstAttribute="top" secondItem="snp-3L-Nc7" secondAttribute="top" type="default" id="afy-Qu-oPo"/>
                                     <constraint firstItem="uLK-bp-YoR" firstAttribute="leading" secondItem="snp-3L-Nc7" secondAttribute="leading" constant="2" id="c6Z-2l-ncX"/>
-                                    <constraint firstItem="Hok-k2-KXS" firstAttribute="leading" secondItem="snp-3L-Nc7" secondAttribute="leading" constant="-6" id="r0q-IZ-NRh"/>
                                     <constraint firstAttribute="bottom" secondItem="uLK-bp-YoR" secondAttribute="bottom" constant="7" id="tR2-6G-rFM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPS-XB-POv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tlt-UI-hsF" firstAttribute="trailing" secondItem="zYc-bL-R5Y" secondAttribute="trailing" type="default" id="0hV-gO-aLF"/>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="174" id="09u-Hg-HWv"/>
                             <constraint firstAttribute="bottom" secondItem="snp-3L-Nc7" secondAttribute="bottom" constant="671" id="1F6-gX-F6B"/>
-                            <constraint firstItem="zYc-bL-R5Y" firstAttribute="leading" secondItem="jRZ-ai-Gvh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2Du-mq-pi5"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" type="default" id="J4N-sa-5ua"/>
-                            <constraint firstItem="tlt-UI-hsF" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="62" id="QV5-GX-t2h"/>
+                            <constraint firstItem="jRZ-ai-Gvh" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="81" id="Ke6-jS-N4E"/>
+                            <constraint firstItem="KPS-XB-POv" firstAttribute="centerY" secondItem="tlt-UI-hsF" secondAttribute="centerY" type="default" id="LdV-YA-raA"/>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="62" id="Oc7-6G-u6G"/>
+                            <constraint firstItem="KPS-XB-POv" firstAttribute="baseline" secondItem="jRZ-ai-Gvh" secondAttribute="baseline" type="default" id="VVp-Hy-6MX"/>
                             <constraint firstItem="snp-3L-Nc7" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="92" id="Wnd-QJ-DpL"/>
                             <constraint firstItem="snp-3L-Nc7" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="139" id="XUF-Ei-mYg"/>
-                            <constraint firstItem="zYc-bL-R5Y" firstAttribute="baseline" secondItem="tlt-UI-hsF" secondAttribute="baseline" type="default" id="ZNl-kt-k55"/>
-                            <constraint firstItem="tlt-UI-hsF" firstAttribute="centerY" secondItem="jRZ-ai-Gvh" secondAttribute="centerY" type="default" id="qxs-KN-Go4"/>
-                            <constraint firstItem="jRZ-ai-Gvh" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rHG-Ey-5Nc"/>
+                            <constraint firstAttribute="trailing" secondItem="snp-3L-Nc7" secondAttribute="trailing" constant="573" id="XVl-hf-LPQ"/>
+                            <constraint firstItem="KPS-XB-POv" firstAttribute="leading" secondItem="jRZ-ai-Gvh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qU4-o1-0MN"/>
                             <constraint firstItem="tlt-UI-hsF" firstAttribute="baseline" secondItem="jRZ-ai-Gvh" secondAttribute="baseline" type="default" id="u0A-jv-frr"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" type="default" id="ubf-NM-srl"/>
                         </constraints>
@@ -1024,7 +1026,7 @@
                     <navigationItem key="navigationItem" id="kmK-Pk-dgc"/>
                     <connections>
                         <outlet property="agePicker" destination="Hok-k2-KXS" id="ITK-Mn-quD"/>
-                        <outlet property="ageTextField" destination="zYc-bL-R5Y" id="SFQ-ak-i52"/>
+                        <outlet property="ageTextField" destination="KPS-XB-POv" id="6em-SP-6ks"/>
                         <outlet property="pickerViewContainer" destination="snp-3L-Nc7" id="N77-pg-O0a"/>
                     </connections>
                 </viewController>
@@ -1280,9 +1282,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Qhw-s0-MGR"/>
-        <segue reference="19w-yl-GeV"/>
         <segue reference="CCA-YW-OWZ"/>
         <segue reference="OH9-1T-bqY"/>
+        <segue reference="1by-Ti-MJO"/>
+        <segue reference="Qhw-s0-MGR"/>
     </inferredMetricsTieBreakers>
 </document>
