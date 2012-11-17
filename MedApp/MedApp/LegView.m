@@ -30,7 +30,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if([[[Model uniqueModel] gender] isEqualToString:@"@Boy"])
+    if([[[Model uniqueModel] gender] isEqualToString:@"Boy"])
         legImage.image = [UIImage imageNamed:@"LegView_boy"];
     else
         legImage.image = [UIImage imageNamed:@"LegView_girl"];

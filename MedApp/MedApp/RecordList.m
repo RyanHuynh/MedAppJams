@@ -68,6 +68,8 @@ titleForHeaderInSection:(NSInteger)section {
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"I KNOW WAT TO DO");
+    NSString *recordSelected = [list objectAtIndex:[indexPath row]];
+    [[Model uniqueModel] selectRecord:recordSelected];
     [self performSegueWithIdentifier:@"toRecord" sender:nil];
 }
 

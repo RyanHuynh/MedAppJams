@@ -1,19 +1,19 @@
 //
-//  TorsoView.m
+//  Milestone.m
 //  MedApp
 //
 //  Created by Ryan Huynh on 11/16/12.
 //  Copyright (c) 2012 Ryan Huynh. All rights reserved.
 //
 
-#import "TorsoView.h"
+#import "Milestone.h"
 
-@interface TorsoView ()
+@interface Milestone ()
 
 @end
 
-@implementation TorsoView
-@synthesize torsoImage;
+@implementation Milestone
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,13 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    if([[[Model uniqueModel] gender] isEqualToString:@"Boy"])
-        torsoImage.image = [UIImage imageNamed:@"TorsoView_boy"];
-    else
-        torsoImage.image = [UIImage imageNamed:@"TorsoView_girl"];
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

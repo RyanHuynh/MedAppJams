@@ -10,7 +10,7 @@
 #import "Setting.h"
 #import "Model.h"
 
-@interface BodyView: UIViewController
+@interface BodyView: UIViewController <UIAlertViewDelegate>
 
 @property(nonatomic , retain) UIPickerView *singlePickerComponent;
 @property(nonatomic , retain) NSArray *ageData;
@@ -33,11 +33,7 @@
 @property (strong, nonatomic) NSMutableDictionary *heightChartUse;
 @property (strong, nonatomic) IBOutlet UILabel *heightType;
 @property (strong, nonatomic) IBOutlet UILabel *weightType;
-
-
-
-
-
+- (IBAction)updateRecord:(id)sender;
 - (IBAction)submitButton:(id)sender;
 
 

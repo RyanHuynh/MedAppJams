@@ -11,9 +11,10 @@
 @interface Setting : UIViewController
 @property (strong, nonatomic) IBOutlet UISegmentedControl *weightSetting;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *heightSetting;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *genderSC;
 -(IBAction)changeHeightSetting:(id)sender;
 -(IBAction)changeWeightSetting:(id)sender;
-
+-(IBAction)changeGender:(id)sender;
 
 @end
 

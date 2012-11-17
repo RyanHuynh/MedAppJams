@@ -14,6 +14,8 @@
 @synthesize gender;
 @synthesize logIn;
 @synthesize log;
+@synthesize selectedRecord;
+
 static Model* _uniqueModel = nil;
 static int weightModifier;
 static int heightModifier;
@@ -48,7 +50,9 @@ static int heightModifier;
         heightSetting=@"(Centimeter)";
         weightModifier = 1;
         heightModifier = 1;
-        log = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"RANDOM", @"ryan", nil];
+        log = [[NSMutableDictionary alloc]init];
+        [self createNewRecord:@"Ryan Awesome"];
+        [self createNewRecord:@"Fantastic Xtina"];
     }
     
 	return self;
@@ -97,7 +101,38 @@ static int heightModifier;
 }
 -(void) createNewRecord:(NSString*) newName
 {
-    NSMutableDictionary *newRecord;
-    [log setValue:newRecord forKey:newName];
+    NSMutableArray *subRecord = [NSMutableArray array];
+    for(int i = 0; i < 3; i++)
+    {
+        [subRecord addObject:@"1"];
+    }
+    NSMutableDictionary *newRecord = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+    subRecord,@"0",
+    subRecord,@"1",
+    subRecord,@"2",
+    subRecord,@"3",
+    subRecord,@"4",
+    subRecord,@"5",
+    subRecord,@"6",
+    subRecord,@"7",
+    subRecord,@"8",
+    subRecord,@"9",
+    subRecord,@"10",
+    subRecord,@"11",
+    subRecord,@"12",
+    nil];
+       
+    [log setObject:newRecord forKey:newName];   
+}
+
+-(void) selectRecord:(NSString *)recordName
+{
+    selectedRecord = recordName;
+}
+
+-(NSMutableArray*) getRecordForMonth:(int) month
+{
+   
+    return [[self.log objectForKey:selectedRecord] objectForKey:[NSString stringWithFormat:@"%d", month]];
 }
 @end

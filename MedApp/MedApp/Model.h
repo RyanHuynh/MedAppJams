@@ -14,6 +14,9 @@
 @property (strong, nonatomic) NSString *gender;
 @property (strong, nonatomic) NSMutableDictionary *log;
 @property BOOL logIn;
+@property (strong, nonatomic) NSString *selectedRecord;
+
+
 +(Model *) uniqueModel;
 -(NSString *) returnWeightSetting;
 -(void) changeGender:(NSString*) _gender;
@@ -26,5 +29,7 @@
 -(void) setLogin:(BOOL) signal;
 -(BOOL) checkRecord:(NSString*) recordName;
 -(void) createNewRecord:(NSString*) newName;
+-(void) selectRecord:(NSString*) recordName;
+-(NSMutableArray*) getRecordForMonth:(int) month;
 @end
 

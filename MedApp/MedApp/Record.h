@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Model.h"
 @interface Record : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *weightLabel;
+@property (strong, nonatomic) IBOutlet UILabel *monthLabel;
+@property (strong, nonatomic) IBOutlet UILabel *heightLabel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *prevButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *nextButton;
+- (IBAction)prevMonth:(id)sender;
+
+- (IBAction)nextMonth:(id)sender;
+
 
 @end

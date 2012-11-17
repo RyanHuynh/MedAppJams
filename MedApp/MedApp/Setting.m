@@ -16,7 +16,7 @@
 @implementation Setting
 @synthesize weightSetting;
 @synthesize heightSetting;
-
+@synthesize genderSC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +48,13 @@
         heightSetting.selectedSegmentIndex = 0;
     else
         heightSetting.selectedSegmentIndex = 1;
+    if([[[Model uniqueModel] gender] isEqualToString:@"Boy"])
+    {
+        genderSC.selectedSegmentIndex = 0;
+    }
+    else
+        genderSC.selectedSegmentIndex = 1;
+
 }
 
 
@@ -75,5 +82,14 @@
     else
         [[Model uniqueModel] changeHeightSetting:@"(Inch)"];
         [[Model uniqueModel] changeHeightModifier:2.54];
+}
+-(IBAction)changeGender:(id)sender {
+        
+    NSString *gender;
+    if(genderSC.selectedSegmentIndex == 0)
+        gender = @"Boy";
+    else
+        gender = @"Girl";
+    [[Model uniqueModel] changeGender:gender];
 }
 @end

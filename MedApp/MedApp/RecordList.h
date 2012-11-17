@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Model.h"ß
+#import "Model.h"
 @interface RecordList : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *list;
 @end

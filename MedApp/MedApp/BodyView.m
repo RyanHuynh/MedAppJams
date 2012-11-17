@@ -177,6 +177,12 @@ static int heightModifier;
 }
 
 
+- (IBAction)updateRecord:(id)sender {
+    if(![[Model uniqueModel] logIn])
+       [self doAlert];
+    //update
+}
+
 - (IBAction)submitButton:(id)sender {
     
     //submitAll(ageTextFIeld, heightTextField, heightLabel, weightTextField, weightLabel);
@@ -216,13 +222,27 @@ static int heightModifier;
         else
             heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]];
     }
-
- 
-    
 }
 
+-(void)doAlert{
+    UIAlertView *alertDialog;
+	alertDialog = [[UIAlertView alloc]
+                   initWithTitle: @"No record selected"
+                   message:@"You have to login inorder to update record."
+                   delegate: self
+                   cancelButtonTitle: nil
+                   otherButtonTitles: @"Log in",@"Cancel",nil];
+                 
 
-    
+	[alertDialog show];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+	NSString *buttonTitle=[alertView buttonTitleAtIndex:buttonIndex];
+	if ([buttonTitle isEqualToString:@"Log in"]) {
+        [self performSegueWithIdentifier:@"toLogin" sender:nil];}
+}
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

@@ -28,13 +28,7 @@
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if([[[Model uniqueModel] gender] isEqualToString:@"Boy"])
-    {
-        genderSC.selectedSegmentIndex = 0;
-    }
-    else
-         genderSC.selectedSegmentIndex = 1;
-}
+   }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,47 +43,43 @@
 }
 
 - (IBAction)goMainMenu:(id)sender {
-    if([name.text isEqualToString:@""])
+    NSString *input = name.text;
+    if([input isEqualToString:@""])
+    {
         [[Model uniqueModel] setLogIn:false];
-    else
+        [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
+    } else
     {
         [[Model uniqueModel] setLogIn:true];
-        if([[Model uniqueModel] checkRecord:name.text] == false)
+        if([[Model uniqueModel] checkRecord:input] == false)
            [self doAlert];
         else
-            NSLog(@"CORRECT");
+            [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
     }
 }
 
-- (IBAction)changeGender:(id)sender {
-    NSString *gender;
-    if(genderSC.selectedSegmentIndex == 0)
-        gender = @"Boy";
-    else
-        gender = @"Girl";
-    [[Model uniqueModel] changeGender:gender];
-}
+
 -(void)doAlert{
     UIAlertView *alertDialog;
 	alertDialog = [[UIAlertView alloc]
-                   initWithTitle: @"Alert Button Selected"
-                   message:@"I need your attention NOW!"
+                   initWithTitle: [NSString stringWithFormat:@"%@%@", @"There is no record for ", name.text]
+                   message:[NSString stringWithFormat:@"%@%@", @"Do you want to create a record for ", name.text]
                    delegate: self
                    cancelButtonTitle: nil
-                   otherButtonTitles: @"Comfirm", @"Skip", nil];
+                   otherButtonTitles: @"Ok", @"Skip", nil];
 	[alertDialog show];
 }
 
 - (void)alertView:(UIAlertView *)alertView
 clickedButtonAtIndex:(NSInteger)buttonIndex {
 	NSString *buttonTitle=[alertView buttonTitleAtIndex:buttonIndex];
-	if ([buttonTitle isEqualToString:@"Comfirm"]) {
-		NSLog(@"RECORED SAVED");
+	if ([buttonTitle isEqualToString:@"Ok"]) {
+		[[Model uniqueModel] createNewRecord:name.text];
+        [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
     } else if ([buttonTitle isEqualToString:@"Skip"]) {
-		NSLog(@"RECORD SKIP");
+		
     }
-    else
-        NSLog(@"being stupid");
+    
 }
 
 @end
