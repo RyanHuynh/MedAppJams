@@ -15,7 +15,6 @@
 		5589D6BF1657B158009DD46B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6BE1657B158009DD46B /* AppDelegate.m */; };
 		5589D6C11657B158009DD46B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C01657B158009DD46B /* Default.png */; };
 		5589D6C51657B158009DD46B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C41657B158009DD46B /* Default-568h@2x.png */; };
-		5589D6CB1657B158009DD46B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6CA1657B158009DD46B /* ViewController.m */; };
 		5589D7131657B1CC009DD46B /* appjam_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6D81657B1CC009DD46B /* appjam_icon_72x72.png */; };
 		5589D7141657B1CC009DD46B /* appjam_milestone1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6D91657B1CC009DD46B /* appjam_milestone1.png */; };
 		5589D7151657B1CC009DD46B /* appjam_milestone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */; };
@@ -62,9 +61,6 @@
 		5589D6C01657B158009DD46B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5589D6C21657B158009DD46B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5589D6C41657B158009DD46B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5589D6C91657B158009DD46B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5589D6CA1657B158009DD46B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5589D6D51657B1CC009DD46B /* AppDelegate_MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_MainMenuViewController.h; sourceTree = "<group>"; };
 		5589D6D81657B1CC009DD46B /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
 		5589D6D91657B1CC009DD46B /* appjam_milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone1.png; sourceTree = "<group>"; };
 		5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone2.png; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 				55C4D2341658240F0031D59C /* View-Controller */,
 				55C4D232165823FA0031D59C /* Model */,
 				5589D7381657B207009DD46B /* Image */,
-				5589D6D51657B1CC009DD46B /* AppDelegate_MainMenuViewController.h */,
 				5589D7391657B33A009DD46B /* MainStoryboard.storyboard */,
 				5589D6B51657B158009DD46B /* Supporting Files */,
 			);
@@ -235,8 +230,6 @@
 				5589D70B1657B1CC009DD46B /* TorsoView.m */,
 				5589D6BD1657B158009DD46B /* AppDelegate.h */,
 				5589D6BE1657B158009DD46B /* AppDelegate.m */,
-				5589D6C91657B158009DD46B /* ViewController.h */,
-				5589D6CA1657B158009DD46B /* ViewController.m */,
 			);
 			name = "View-Controller";
 			sourceTree = "<group>";
@@ -326,7 +319,6 @@
 			files = (
 				5589D6BB1657B158009DD46B /* main.m in Sources */,
 				5589D6BF1657B158009DD46B /* AppDelegate.m in Sources */,
-				5589D6CB1657B158009DD46B /* ViewController.m in Sources */,
 				5589D71E1657B1CC009DD46B /* BodyView.m in Sources */,
 				5589D7251657B1CC009DD46B /* HeadView.m in Sources */,
 				5589D7281657B1CC009DD46B /* LegView.m in Sources */,
