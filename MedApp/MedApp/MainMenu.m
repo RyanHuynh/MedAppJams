@@ -34,12 +34,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 -(void)doAlert{
     UIAlertView *alertDialog;
 	alertDialog = [[UIAlertView alloc]
                    initWithTitle: @"Log Out"
-                   message:[NSString stringWithFormat:@"%@%@", @"Do you want to sign out for ", [[Model uniqueModel] selectedRecord]]
+                   message:[NSString stringWithFormat:@"%@%@", @"Do you want to sign out for ", [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"]]
                    delegate: self
                    cancelButtonTitle: nil
                    otherButtonTitles: @"Ok",@"Cancel",nil];

@@ -155,37 +155,11 @@
 		5589D6B41657B158009DD46B /* MedApp */ = {
 			isa = PBXGroup;
 			children = (
+				55C4D2341658240F0031D59C /* View-Controller */,
+				55C4D232165823FA0031D59C /* Model */,
 				5589D7381657B207009DD46B /* Image */,
 				5589D6D51657B1CC009DD46B /* AppDelegate_MainMenuViewController.h */,
 				5589D7391657B33A009DD46B /* MainStoryboard.storyboard */,
-				5589D6E31657B1CC009DD46B /* BodyView.h */,
-				5589D6E41657B1CC009DD46B /* BodyView.m */,
-				5589D6EE1657B1CC009DD46B /* HeadView.h */,
-				5589D6EF1657B1CC009DD46B /* HeadView.m */,
-				5589D6F21657B1CC009DD46B /* LegView.h */,
-				5589D6F31657B1CC009DD46B /* LegView.m */,
-				5589D6F61657B1CC009DD46B /* LogInList.h */,
-				5589D6F71657B1CC009DD46B /* LogInList.m */,
-				5589D6F81657B1CC009DD46B /* MainMenu.h */,
-				5589D6F91657B1CC009DD46B /* MainMenu.m */,
-				5589D6FB1657B1CC009DD46B /* Milestone.h */,
-				5589D6FC1657B1CC009DD46B /* Milestone.m */,
-				5589D6FE1657B1CC009DD46B /* Milestones.h */,
-				5589D6FF1657B1CC009DD46B /* Milestones.m */,
-				5589D7001657B1CC009DD46B /* Model.h */,
-				5589D7011657B1CC009DD46B /* Model.m */,
-				5589D7021657B1CC009DD46B /* Record.h */,
-				5589D7031657B1CC009DD46B /* Record.m */,
-				5589D7041657B1CC009DD46B /* RecordList.h */,
-				5589D7051657B1CC009DD46B /* RecordList.m */,
-				5589D7061657B1CC009DD46B /* Setting.h */,
-				5589D7071657B1CC009DD46B /* Setting.m */,
-				5589D70A1657B1CC009DD46B /* TorsoView.h */,
-				5589D70B1657B1CC009DD46B /* TorsoView.m */,
-				5589D6BD1657B158009DD46B /* AppDelegate.h */,
-				5589D6BE1657B158009DD46B /* AppDelegate.m */,
-				5589D6C91657B158009DD46B /* ViewController.h */,
-				5589D6CA1657B158009DD46B /* ViewController.m */,
 				5589D6B51657B158009DD46B /* Supporting Files */,
 			);
 			path = MedApp;
@@ -228,6 +202,48 @@
 				5589D6E21657B1CC009DD46B /* BodyView_girl.png */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		55C4D232165823FA0031D59C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5589D7001657B1CC009DD46B /* Model.h */,
+				5589D7011657B1CC009DD46B /* Model.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55C4D2341658240F0031D59C /* View-Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5589D6E31657B1CC009DD46B /* BodyView.h */,
+				5589D6E41657B1CC009DD46B /* BodyView.m */,
+				5589D6EE1657B1CC009DD46B /* HeadView.h */,
+				5589D6EF1657B1CC009DD46B /* HeadView.m */,
+				5589D6F21657B1CC009DD46B /* LegView.h */,
+				5589D6F31657B1CC009DD46B /* LegView.m */,
+				5589D6F61657B1CC009DD46B /* LogInList.h */,
+				5589D6F71657B1CC009DD46B /* LogInList.m */,
+				5589D6F81657B1CC009DD46B /* MainMenu.h */,
+				5589D6F91657B1CC009DD46B /* MainMenu.m */,
+				5589D6FB1657B1CC009DD46B /* Milestone.h */,
+				5589D6FC1657B1CC009DD46B /* Milestone.m */,
+				5589D6FE1657B1CC009DD46B /* Milestones.h */,
+				5589D6FF1657B1CC009DD46B /* Milestones.m */,
+				5589D7021657B1CC009DD46B /* Record.h */,
+				5589D7031657B1CC009DD46B /* Record.m */,
+				5589D7041657B1CC009DD46B /* RecordList.h */,
+				5589D7051657B1CC009DD46B /* RecordList.m */,
+				5589D7061657B1CC009DD46B /* Setting.h */,
+				5589D7071657B1CC009DD46B /* Setting.m */,
+				5589D70A1657B1CC009DD46B /* TorsoView.h */,
+				5589D70B1657B1CC009DD46B /* TorsoView.m */,
+				5589D6BD1657B158009DD46B /* AppDelegate.h */,
+				5589D6BE1657B158009DD46B /* AppDelegate.m */,
+				5589D6C91657B158009DD46B /* ViewController.h */,
+				5589D6CA1657B158009DD46B /* ViewController.m */,
+			);
+			name = "View-Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

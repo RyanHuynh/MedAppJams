@@ -14,12 +14,14 @@
 @synthesize gender;
 @synthesize logIn;
 @synthesize log;
+@synthesize loginID;
 @synthesize selectedRecord;
 
 static Model* _uniqueModel = nil;
 static int weightModifier;
 static int heightModifier;
 static int uniqueId;
+
 +(Model *)uniqueModel
 {
 	@synchronized([Model class])
@@ -113,6 +115,8 @@ static int uniqueId;
     NSMutableDictionary *monthRecord = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
                                         newName,@"name",
                                         genderS,@"gender",
+                                        @"",@"weight",
+                                         @"",@"height",
                                         nil];
     NSMutableArray *newRecord = [NSMutableArray array];
     for(int i = 0; i < 12; i++)
@@ -123,14 +127,29 @@ static int uniqueId;
     uniqueId++;
 }
 
--(void) selectRecord:(NSString *)recordName
+-(void) selectRecord:(NSString *)recordID
 {
-    selectedRecord = recordName;
+    //selectedRecord = recordName;
+    selectedRecord = recordID;
 }
 
--(NSMutableArray*) getRecordForMonth:(int) month
+-(NSMutableDictionary*) getRecordForMonth:(int) month
 {
-   
-    return [[self.log objectForKey:selectedRecord] objectForKey:[NSString stringWithFormat:@"%d", month]];
+    NSMutableDictionary *temp = [[self.log objectForKey:selectedRecord] objectAtIndex:month];
+    return temp;
 }
+
+-(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) heightP: (NSString*) weightP:(int) month
+{
+    [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:height forKey:@"height" ];
+    [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:weight forKey:@"weight"];
+    [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:heightP forKey:@"weightP"];
+    [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:weightP forKey:@"heightP"];
+}
+
+-(NSString*) getSelectedRecordName
+{
+    return [[[log objectForKey:selectedRecord] objectAtIndex:0] objectForKey:@"name"];
+}
+
 @end

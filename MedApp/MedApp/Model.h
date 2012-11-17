@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *gender;
 @property (strong, nonatomic) NSMutableDictionary *log;
 @property BOOL logIn;
+@property (strong, nonatomic) NSString *loginID;
 @property (strong, nonatomic) NSString *selectedRecord;
 
 
@@ -29,7 +30,10 @@
 -(void) setLogin:(BOOL) signal;
 -(BOOL) checkRecord:(NSString*) recordName;
 -(void) createNewRecord:(NSString*) newName:(int) genderInput;
--(void) selectRecord:(NSString*) recordName;
--(NSMutableArray*) getRecordForMonth:(int) month;
+-(void) selectRecord:(NSString*) recordID;
+-(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) heightP: (NSString*) weightP:(int) month;
+-(NSMutableDictionary*) getRecordForMonth:(int) month;
+-(NSString*) getSelectedRecordName;
+
 @end
 

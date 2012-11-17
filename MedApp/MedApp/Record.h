@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *weightLabel;
 @property (strong, nonatomic) IBOutlet UILabel *monthLabel;
 @property (strong, nonatomic) IBOutlet UILabel *heightLabel;
+@property (strong, nonatomic) IBOutlet UILabel *heightPLabel;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *weightPLabel;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *prevButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 - (IBAction)prevMonth:(id)sender;

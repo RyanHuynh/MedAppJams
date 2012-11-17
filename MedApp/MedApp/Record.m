@@ -51,11 +51,11 @@ static int selectedMonth;
  }
 -(void) display
 {
-    nameLabel.text = [[Model uniqueModel] selectedRecord];
+    nameLabel.text = [[Model uniqueModel] getSelectedRecordName];
     monthLabel.text = [NSString stringWithFormat:@"%d", selectedMonth];
-    NSMutableArray *temp = [[Model uniqueModel] getRecordForMonth:0];
-    weightLabel.text = [temp objectAtIndex:1];
-    heightLabel.text = [temp objectAtIndex:2];
+    NSMutableDictionary *temp = [[Model uniqueModel] getRecordForMonth:selectedMonth];
+    weightLabel.text = [temp objectForKey:@"weight"];
+    heightLabel.text = [temp objectForKey:@"height"];
 }
 
 - (IBAction)prevMonth:(id)sender {

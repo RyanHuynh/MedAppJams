@@ -32,8 +32,7 @@
     list = [NSMutableArray array];
     for(id key in [[Model uniqueModel] log])
     {
-        NSString *uniqueID = key;
-        [list addObject:[[[[[Model uniqueModel] log] objectForKey:uniqueID] objectAtIndex:0] objectForKey:@"name"]];
+        [list addObject:key];
     }
     
 }
@@ -57,8 +56,8 @@ titleForHeaderInSection:(NSInteger)section {
 {
 	UITableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:@"record"];
-    
-    cell.textLabel.text=[self.list objectAtIndex:indexPath.row];
+    NSString *recordId = [self.list objectAtIndex:indexPath.row];
+    cell.textLabel.text=[[[[[Model uniqueModel] log] objectForKey:recordId]objectAtIndex:0]objectForKey:@"name"];
     return cell;
 }
 
@@ -69,8 +68,7 @@ titleForHeaderInSection:(NSInteger)section {
 }
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *recordSelected = [list objectAtIndex:[indexPath row]];
-    [[Model uniqueModel] selectRecord:recordSelected];
+    [[Model uniqueModel] selectRecord:[list objectAtIndex:[indexPath row]]];
     [[Model uniqueModel] setLogIn:YES];
     [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
 }

@@ -30,7 +30,7 @@
     list = [NSMutableArray array];
     for(id key in [[Model uniqueModel] log])
     {
-         [list addObject:[[[[[Model uniqueModel] log] objectForKey:key] objectAtIndex:0] objectForKey:@"name"]];
+        [list addObject:key];
     }
     
 }
@@ -55,7 +55,8 @@ titleForHeaderInSection:(NSInteger)section {
 	UITableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:@"recordCell"];
     
-    cell.textLabel.text=[self.list objectAtIndex:indexPath.row];
+    NSString *recordId = [self.list objectAtIndex:indexPath.row];
+    cell.textLabel.text=[[[[[Model uniqueModel] log] objectForKey:recordId]objectAtIndex:0]objectForKey:@"name"];
     return cell;
 }
 

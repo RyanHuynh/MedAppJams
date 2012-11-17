@@ -180,6 +180,11 @@ static int heightModifier;
 - (IBAction)updateRecord:(id)sender {
     if(![[Model uniqueModel] logIn])
        [self doAlert];
+    else
+    {
+        [[Model uniqueModel] bodyViewUpdate: heightTextField.text: weightTextField.text :weightLabel.text :heightLabel.text  :0];
+        [self showComfirmation];
+    }
     //update
 }
 
@@ -243,7 +248,19 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if ([buttonTitle isEqualToString:@"Log in"]) {
         [self performSegueWithIdentifier:@"toLogIn" sender:nil];}
 }
-
+-(void) showComfirmation
+{
+    UIAlertView *alertDialog;
+	alertDialog = [[UIAlertView alloc]
+                   initWithTitle: @"Record has ben saved."
+                   message:nil
+                   delegate: self
+                   cancelButtonTitle: @"OK"
+                   otherButtonTitles: nil];
+    
+    
+	[alertDialog show];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     return [textField resignFirstResponder];

@@ -542,12 +542,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Height Percentile:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odl-H1-YTx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="heightP Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL7-FT-JG7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight Percentiel: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cy-Nf-HMT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="weightP Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncK-XU-18I">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="j6H-oE-9j1" firstAttribute="top" secondItem="UbF-xs-5Wl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="40x-O5-kvG"/>
                             <constraint firstItem="ihf-OS-UMB" firstAttribute="trailing" secondItem="U9V-Qd-LeA" secondAttribute="trailing" type="default" id="4hh-WO-BNp"/>
+                            <constraint firstItem="ncK-XU-18I" firstAttribute="baseline" secondItem="7cy-Nf-HMT" secondAttribute="baseline" type="user" id="4kd-8o-lzD"/>
                             <constraint firstItem="gcg-1K-wb8" firstAttribute="top" secondItem="5Zn-pw-9Uo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="66H-HI-JeX"/>
+                            <constraint firstItem="odl-H1-YTx" firstAttribute="top" secondItem="QVC-dP-cyB" secondAttribute="top" constant="273" id="6dW-jt-Cst"/>
                             <constraint firstItem="ihf-OS-UMB" firstAttribute="baseline" secondItem="5Zn-pw-9Uo" secondAttribute="baseline" type="default" id="7z7-Mf-uhV"/>
                             <constraint firstItem="ic5-cs-hVD" firstAttribute="trailing" secondItem="QVC-dP-cyB" secondAttribute="trailing" type="default" id="890-xe-vPe"/>
                             <constraint firstItem="qQx-fj-N05" firstAttribute="trailing" secondItem="QVC-dP-cyB" secondAttribute="trailing" type="default" id="8AP-qM-bsP"/>
@@ -555,15 +577,21 @@
                             <constraint firstItem="5Zn-pw-9Uo" firstAttribute="leading" secondItem="gcg-1K-wb8" secondAttribute="leading" type="default" id="Bx5-V3-7fZ"/>
                             <constraint firstItem="ic5-cs-hVD" firstAttribute="top" secondItem="QVC-dP-cyB" secondAttribute="top" type="default" id="DUu-2B-BKn"/>
                             <constraint firstItem="U9V-Qd-LeA" firstAttribute="leading" secondItem="QVC-dP-cyB" secondAttribute="leading" constant="165" id="ERf-ff-crs"/>
+                            <constraint firstItem="ncK-XU-18I" firstAttribute="leading" secondItem="7cy-Nf-HMT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Eku-AC-cz5"/>
                             <constraint firstItem="UbF-xs-5Wl" firstAttribute="top" secondItem="gcg-1K-wb8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MNa-kF-Gc6"/>
                             <constraint firstItem="ihf-OS-UMB" firstAttribute="leading" secondItem="URn-8u-5Yi" secondAttribute="leading" type="default" id="NTI-sY-r4c"/>
                             <constraint firstItem="URn-8u-5Yi" firstAttribute="baseline" secondItem="gcg-1K-wb8" secondAttribute="baseline" type="default" id="PD9-qH-i6c"/>
                             <constraint firstItem="qQx-fj-N05" firstAttribute="bottom" secondItem="QVC-dP-cyB" secondAttribute="bottom" type="default" id="QEv-ab-dQD"/>
                             <constraint firstItem="UbF-xs-5Wl" firstAttribute="leading" secondItem="QVC-dP-cyB" secondAttribute="leading" constant="91" id="RtK-HS-QRt"/>
+                            <constraint firstItem="dL7-FT-JG7" firstAttribute="baseline" secondItem="odl-H1-YTx" secondAttribute="baseline" type="default" id="Tob-KT-ZPg"/>
+                            <constraint firstItem="odl-H1-YTx" firstAttribute="leading" secondItem="j6H-oE-9j1" secondAttribute="leading" type="default" id="UeF-ir-x6F"/>
                             <constraint firstItem="5Zn-pw-9Uo" firstAttribute="top" secondItem="QVC-dP-cyB" secondAttribute="top" constant="152" id="WTz-6W-Ktf"/>
                             <constraint firstItem="XYw-s0-tdl" firstAttribute="leading" secondItem="U9V-Qd-LeA" secondAttribute="leading" type="default" id="e3l-BQ-RBw"/>
+                            <constraint firstItem="7cy-Nf-HMT" firstAttribute="top" secondItem="odl-H1-YTx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="f9z-Ya-dVz"/>
+                            <constraint firstItem="7cy-Nf-HMT" firstAttribute="leading" secondItem="odl-H1-YTx" secondAttribute="leading" type="default" id="hi4-WV-iSH"/>
                             <constraint firstItem="U9V-Qd-LeA" firstAttribute="baseline" secondItem="UbF-xs-5Wl" secondAttribute="baseline" type="default" id="kS0-9i-Pzu"/>
                             <constraint firstItem="XYw-s0-tdl" firstAttribute="baseline" secondItem="j6H-oE-9j1" secondAttribute="baseline" type="default" id="lXN-xu-5HA"/>
+                            <constraint firstItem="dL7-FT-JG7" firstAttribute="leading" secondItem="odl-H1-YTx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nQb-M4-2I8"/>
                             <constraint firstItem="j6H-oE-9j1" firstAttribute="leading" secondItem="UbF-xs-5Wl" secondAttribute="leading" type="default" id="t8f-qH-bkc"/>
                             <constraint firstItem="ic5-cs-hVD" firstAttribute="leading" secondItem="QVC-dP-cyB" secondAttribute="leading" type="default" id="uK5-lC-rGL"/>
                             <constraint firstItem="UbF-xs-5Wl" firstAttribute="centerX" secondItem="5Zn-pw-9Uo" secondAttribute="centerX" type="default" id="zJo-WU-fXl"/>
@@ -571,9 +599,11 @@
                     </view>
                     <connections>
                         <outlet property="heightLabel" destination="XYw-s0-tdl" id="MF6-kk-ZkT"/>
+                        <outlet property="heightPLabel" destination="dL7-FT-JG7" id="J2d-S5-fBh"/>
                         <outlet property="monthLabel" destination="ihf-OS-UMB" id="4aP-3C-Xwb"/>
                         <outlet property="nameLabel" destination="URn-8u-5Yi" id="84Q-UE-9SL"/>
                         <outlet property="weightLabel" destination="U9V-Qd-LeA" id="OeU-Oq-uFo"/>
+                        <outlet property="weightPLabel" destination="4kd-8o-lzD" id="djw-qy-ZNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEh-z3-OlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1105,11 +1135,13 @@
                 <relationship kind="action" name="nextMonth:"/>
                 <relationship kind="action" name="prevMonth:"/>
                 <relationship kind="outlet" name="heightLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="heightPLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="monthLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="prevButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="weightLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weightPLabel" candidateClass="NSLayoutConstraint"/>
             </relationships>
         </class>
         <class className="RecordList" superclassName="UIViewController">
@@ -1139,9 +1171,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OH9-1T-bqY"/>
-        <segue reference="CCA-YW-OWZ"/>
-        <segue reference="HmV-Bw-h4B"/>
         <segue reference="Qhw-s0-MGR"/>
+        <segue reference="19w-yl-GeV"/>
+        <segue reference="CCA-YW-OWZ"/>
+        <segue reference="OH9-1T-bqY"/>
     </inferredMetricsTieBreakers>
 </document>
