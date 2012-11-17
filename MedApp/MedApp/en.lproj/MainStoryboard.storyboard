@@ -559,7 +559,7 @@
                                     <action selector="showAge:" destination="mlR-9W-xED" eventType="touchUpInside" id="Rnt-Dq-lme"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-gT-JRo">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-gT-JRo">
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AxF-a5-k4v">
                                         <constraints>
@@ -589,11 +589,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="leading" secondItem="4mk-gT-JRo" secondAttribute="leading" type="default" id="ALD-Sl-wBA"/>
-                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OYS-Y4-Ciy"/>
+                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="bottom" secondItem="4mk-gT-JRo" secondAttribute="bottom" type="default" id="MTE-w8-HnZ"/>
                                     <constraint firstItem="3DX-gQ-fMe" firstAttribute="trailing" secondItem="4mk-gT-JRo" secondAttribute="trailing" type="default" id="RNv-Ke-OEC"/>
-                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" type="default" id="WOo-KF-luF"/>
+                                    <constraint firstItem="3DX-gQ-fMe" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" constant="216" scoringType="5" id="dTP-f3-ywu"/>
+                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="top" secondItem="4mk-gT-JRo" secondAttribute="top" type="default" id="n1q-Go-APz"/>
                                     <constraint firstItem="3DX-gQ-fMe" firstAttribute="leading" secondItem="4mk-gT-JRo" secondAttribute="leading" type="default" id="sd3-ur-Jzm"/>
+                                    <constraint firstItem="AxF-a5-k4v" firstAttribute="leading" secondItem="4mk-gT-JRo" secondAttribute="leading" type="default" id="uuz-RZ-Ra5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -601,17 +602,16 @@
                         <constraints>
                             <constraint firstItem="Xqt-aj-mvk" firstAttribute="baseline" secondItem="BHp-u9-orb" secondAttribute="baseline" type="default" id="3Pn-Q7-YpJ"/>
                             <constraint firstItem="FPH-r8-teK" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="80" id="6kz-bF-vxG"/>
-                            <constraint firstAttribute="bottom" secondItem="4mk-gT-JRo" secondAttribute="bottom" constant="660" id="A7b-Un-oit"/>
                             <constraint firstItem="Xqt-aj-mvk" firstAttribute="trailing" secondItem="FPH-r8-teK" secondAttribute="trailing" type="default" id="DQA-kK-d0a"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" type="default" id="J4N-sa-5ua"/>
-                            <constraint firstItem="4mk-gT-JRo" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="800" id="JkB-GR-4PE"/>
                             <constraint firstItem="BHp-u9-orb" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="84" id="Kl8-Pq-90c"/>
+                            <constraint firstItem="4mk-gT-JRo" firstAttribute="leading" secondItem="FPH-r8-teK" secondAttribute="leading" type="default" id="QzA-x6-fxZ"/>
                             <constraint firstItem="Xqt-aj-mvk" firstAttribute="centerY" secondItem="FPH-r8-teK" secondAttribute="centerY" type="default" id="cJe-7X-mNX"/>
                             <constraint firstItem="4mk-gT-JRo" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="109" id="lzj-GD-ff6"/>
                             <constraint firstItem="FPH-r8-teK" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="139" id="o5p-Qp-zpN"/>
                             <constraint firstItem="BHp-u9-orb" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q3k-Lc-2bd"/>
+                            <constraint firstAttribute="trailing" secondItem="4mk-gT-JRo" secondAttribute="trailing" constant="566" id="rlh-z4-98a"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" type="default" id="ubf-NM-srl"/>
-                            <constraint firstAttribute="trailing" secondItem="4mk-gT-JRo" secondAttribute="trailing" constant="-95" id="udw-uM-3Hi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kmK-Pk-dgc"/>
@@ -622,6 +622,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcA-Ry-3Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="X2h-X9-aID">
+                    <connections>
+                        <action selector="tap:" destination="mlR-9W-xED" id="M4e-8f-ZqK"/>
+                        <outlet property="delegate" destination="mlR-9W-xED" id="RgW-Nn-Fij"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-584" y="-1674"/>
         </scene>
@@ -660,6 +666,7 @@
             <relationships>
                 <relationship kind="action" name="pickerDone:"/>
                 <relationship kind="action" name="showAge:"/>
+                <relationship kind="action" name="tap:"/>
                 <relationship kind="outlet" name="agePicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="ageTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pickerViewContainer" candidateClass="UIView"/>

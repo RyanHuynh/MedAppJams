@@ -35,8 +35,8 @@
     [super viewDidLoad];
     
     ageData = [[NSArray alloc] initWithObjects: @"0", @"1",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
-    
-    pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);
+    pickerViewContainer.hidden = YES;
+    //pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);
     
     
 	// Do any additional setup after loading the view.
@@ -64,18 +64,24 @@
     return [ageData objectAtIndex:row];
 }
 
+- (IBAction)tap:(id)sender {
+    pickerViewContainer.hidden = YES;
+}
+
 - (IBAction)showAge:(id)sender {
-    [UIView beginAnimations:nil context:(NULL)];
-    [UIView setAnimationDuration:0.3];
-    pickerViewContainer.frame = CGRectMake(139, 109, 63, 235);
-    [UIView commitAnimations];
+    pickerViewContainer.hidden = NO;
+//    [UIView beginAnimations:nil context:(NULL)];
+//    [UIView setAnimationDuration:0.3];
+//    pickerViewContainer.frame = CGRectMake(139, 109, 63, 235);
+//    [UIView commitAnimations];
     
 }
 
 - (IBAction)pickerDone:(id)sender {
-    [UIView beginAnimations:nil context:(NULL)];
-    [UIView setAnimationDuration:0.3];
-    pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);    [UIView commitAnimations];
+    pickerViewContainer.hidden = YES;
+//    [UIView beginAnimations:nil context:(NULL)];
+//    [UIView setAnimationDuration:0.3];
+//    pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);    [UIView commitAnimations];
     
 }
 @end
