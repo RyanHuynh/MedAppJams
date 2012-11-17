@@ -19,6 +19,7 @@
 		555241351651FEC500E206F3 /* BodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 555241341651FEC500E206F3 /* BodyView.m */; };
 		556D5B251655C8540059668E /* LogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B241655C8540059668E /* LogIn.m */; };
 		556D5B2C1655E1270059668E /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B2B1655E1270059668E /* Setting.m */; };
+<<<<<<< HEAD
 		556D5B2F16560F100059668E /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B2E16560F100059668E /* Model.m */; };
 		556D5B451656BD5F0059668E /* HeadView_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D5B341656BD5F0059668E /* HeadView_boy.png */; };
 		556D5B461656BD5F0059668E /* LegView_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D5B351656BD5F0059668E /* LegView_boy.png */; };
@@ -43,6 +44,11 @@
 		556D5B6D1656F68E0059668E /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B6C1656F68E0059668E /* Record.m */; };
 		556D5B781656FC3D0059668E /* RecordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B771656FC3D0059668E /* RecordList.m */; };
 		F1B73D111657173400C9234E /* Milestones.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B73D101657173400C9234E /* Milestones.m */; };
+=======
+		55BC7B781654991500738F67 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC7B761654991500738F67 /* boy.png */; };
+		55BC7B791654991500738F67 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC7B771654991500738F67 /* girl.png */; };
+		F11B37CE1656127400EFCE8B /* Milestones.m in Sources */ = {isa = PBXBuildFile; fileRef = F11B37CD1656127400EFCE8B /* Milestones.m */; };
+>>>>>>> Eiling
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,7 @@
 		556D5B241655C8540059668E /* LogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogIn.m; sourceTree = "<group>"; };
 		556D5B2A1655E1270059668E /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		556D5B2B1655E1270059668E /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		556D5B2D16560F100059668E /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		556D5B2E16560F100059668E /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		556D5B341656BD5F0059668E /* HeadView_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadView_boy.png; sourceTree = "<group>"; };
@@ -98,6 +105,12 @@
 		556D5B771656FC3D0059668E /* RecordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordList.m; sourceTree = "<group>"; };
 		F1B73D0F1657173400C9234E /* Milestones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Milestones.h; path = ../Milestones.h; sourceTree = "<group>"; };
 		F1B73D101657173400C9234E /* Milestones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Milestones.m; path = ../Milestones.m; sourceTree = "<group>"; };
+=======
+		55BC7B761654991500738F67 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
+		55BC7B771654991500738F67 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		F11B37CC1656127400EFCE8B /* Milestones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestones.h; sourceTree = "<group>"; };
+		F11B37CD1656127400EFCE8B /* Milestones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestones.m; sourceTree = "<group>"; };
+>>>>>>> Eiling
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +185,18 @@
 				5513BF5416533CEE00AB10A8 /* Image */,
 				555241271651FEC500E206F3 /* AppDelegate.h */,
 				555241281651FEC500E206F3 /* AppDelegate.m */,
+<<<<<<< HEAD
+=======
+				555241301651FEC500E206F3 /* MainStoryboard.storyboard */,
+				F11B37CC1656127400EFCE8B /* Milestones.h */,
+				F11B37CD1656127400EFCE8B /* Milestones.m */,
+				555241331651FEC500E206F3 /* BodyView.h */,
+				555241341651FEC500E206F3 /* BodyView.m */,
+				556D5B231655C8540059668E /* LogIn.h */,
+				556D5B241655C8540059668E /* LogIn.m */,
+				556D5B2A1655E1270059668E /* Setting.h */,
+				556D5B2B1655E1270059668E /* Setting.m */,
+>>>>>>> Eiling
 				5552411F1651FEC500E206F3 /* Supporting Files */,
 			);
 			path = MedApp;
@@ -314,6 +339,7 @@
 				555241351651FEC500E206F3 /* BodyView.m in Sources */,
 				556D5B251655C8540059668E /* LogIn.m in Sources */,
 				556D5B2C1655E1270059668E /* Setting.m in Sources */,
+<<<<<<< HEAD
 				556D5B2F16560F100059668E /* Model.m in Sources */,
 				556D5B5B1656BF250059668E /* HeadView.m in Sources */,
 				556D5B5E1656BF330059668E /* LegView.m in Sources */,
@@ -322,6 +348,9 @@
 				556D5B6D1656F68E0059668E /* Record.m in Sources */,
 				556D5B781656FC3D0059668E /* RecordList.m in Sources */,
 				F1B73D111657173400C9234E /* Milestones.m in Sources */,
+=======
+				F11B37CE1656127400EFCE8B /* Milestones.m in Sources */,
+>>>>>>> Eiling
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
