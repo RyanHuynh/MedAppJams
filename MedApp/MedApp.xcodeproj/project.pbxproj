@@ -42,6 +42,7 @@
 		556D5B681656DF770059668E /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B671656DF760059668E /* MainMenu.m */; };
 		556D5B6D1656F68E0059668E /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B6C1656F68E0059668E /* Record.m */; };
 		556D5B781656FC3D0059668E /* RecordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D5B771656FC3D0059668E /* RecordList.m */; };
+		F1B73D111657173400C9234E /* Milestones.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B73D101657173400C9234E /* Milestones.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,8 @@
 		556D5B6C1656F68E0059668E /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 		556D5B761656FC3D0059668E /* RecordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordList.h; sourceTree = "<group>"; };
 		556D5B771656FC3D0059668E /* RecordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordList.m; sourceTree = "<group>"; };
+		F1B73D0F1657173400C9234E /* Milestones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Milestones.h; path = ../Milestones.h; sourceTree = "<group>"; };
+		F1B73D101657173400C9234E /* Milestones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Milestones.m; path = ../Milestones.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				555241301651FEC500E206F3 /* MainStoryboard.storyboard */,
+				F1B73D0F1657173400C9234E /* Milestones.h */,
+				F1B73D101657173400C9234E /* Milestones.m */,
 				556D5B761656FC3D0059668E /* RecordList.h */,
 				556D5B771656FC3D0059668E /* RecordList.m */,
 				556D5B6B1656F68E0059668E /* Record.h */,
@@ -316,6 +321,7 @@
 				556D5B681656DF770059668E /* MainMenu.m in Sources */,
 				556D5B6D1656F68E0059668E /* Record.m in Sources */,
 				556D5B781656FC3D0059668E /* RecordList.m in Sources */,
+				F1B73D111657173400C9234E /* Milestones.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

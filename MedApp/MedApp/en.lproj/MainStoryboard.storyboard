@@ -819,6 +819,71 @@
         <image name="LegView_boy.png" width="1280" height="1200"/>
         <image name="TorsoView_boy.png" width="1280" height="1200"/>
     </resources>
+    <classes>
+        <class className="BodyView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BodyView.h"/>
+            <relationships>
+                <relationship kind="action" name="submitButton:"/>
+                <relationship kind="outlet" name="ageTextFIeld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="bodyPic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="heightLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="heightTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="heightType" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weightLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weightTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightType" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HeadView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="headImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LegView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LegView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="legImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LogIn" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogIn.h"/>
+            <relationships>
+                <relationship kind="action" name="changeGender:"/>
+                <relationship kind="action" name="goMainMenu:"/>
+                <relationship kind="outlet" name="genderSC" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="Record" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Record.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weightLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="RecordList" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecordList.h"/>
+        </class>
+        <class className="Setting" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Setting.h"/>
+            <relationships>
+                <relationship kind="action" name="changeHeightSetting:"/>
+                <relationship kind="action" name="changeWeightSetting:"/>
+                <relationship kind="outlet" name="heightSetting" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="weightSetting" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="TorsoView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TorsoView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="torsoImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -826,7 +891,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="JU6-ff-iPr"/>
-        <segue reference="yWQ-R6-IsH"/>
+        <segue reference="1uY-8z-qdY"/>
         <segue reference="ina-zz-Ffx"/>
     </inferredMetricsTieBreakers>
 </document>
