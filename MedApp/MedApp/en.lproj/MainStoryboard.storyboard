@@ -905,7 +905,7 @@
         <!--Milestone-->
         <scene sceneID="h8U-I4-gEX">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="mlR-9W-xED" userLabel="Milestone" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="mlR-9W-xED" userLabel="Milestone" customClass="Milestones" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o9m-7A-rGY">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -920,14 +920,97 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age(months):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-ai-Gvh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-bL-R5Y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SiK-Oy-Nt0"/>
+                                    <constraint firstAttribute="width" constant="97" id="TKk-Hz-FOi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-UI-hsF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="BA8-aj-W3r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="V">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAge:" destination="mlR-9W-xED" eventType="touchUpInside" id="Kud-Ry-LWu"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snp-3L-Nc7">
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hok-k2-KXS">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="aZp-Xa-Rry"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mlR-9W-xED" id="2p6-7f-unR"/>
+                                            <outlet property="delegate" destination="mlR-9W-xED" id="6sq-zZ-U29"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLK-bp-YoR">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="5h3-ln-HEH"/>
+                                            <constraint firstAttribute="width" constant="50" id="R5e-xv-Tar"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickerDone:" destination="mlR-9W-xED" eventType="touchUpInside" id="LuV-AR-SEk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hok-k2-KXS" firstAttribute="leading" secondItem="snp-3L-Nc7" secondAttribute="leading" type="default" id="Odo-NZ-ZLv"/>
+                                    <constraint firstItem="Hok-k2-KXS" firstAttribute="top" secondItem="snp-3L-Nc7" secondAttribute="top" type="default" id="afy-Qu-oPo"/>
+                                    <constraint firstItem="uLK-bp-YoR" firstAttribute="leading" secondItem="snp-3L-Nc7" secondAttribute="leading" constant="2" id="c6Z-2l-ncX"/>
+                                    <constraint firstItem="Hok-k2-KXS" firstAttribute="trailing" secondItem="snp-3L-Nc7" secondAttribute="trailing" type="default" id="l6u-De-dBK"/>
+                                    <constraint firstAttribute="bottom" secondItem="uLK-bp-YoR" secondAttribute="bottom" constant="7" id="tR2-6G-rFM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="trailing" secondItem="zYc-bL-R5Y" secondAttribute="trailing" type="default" id="0hV-gO-aLF"/>
+                            <constraint firstAttribute="bottom" secondItem="snp-3L-Nc7" secondAttribute="bottom" constant="671" id="1F6-gX-F6B"/>
+                            <constraint firstItem="zYc-bL-R5Y" firstAttribute="leading" secondItem="jRZ-ai-Gvh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2Du-mq-pi5"/>
+                            <constraint firstItem="zYc-bL-R5Y" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="63" id="2bp-nE-YVz"/>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="top" secondItem="zYc-bL-R5Y" secondAttribute="top" type="default" id="AWy-oD-J3v"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" type="default" id="J4N-sa-5ua"/>
+                            <constraint firstItem="snp-3L-Nc7" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" constant="92" id="Wnd-QJ-DpL"/>
+                            <constraint firstItem="snp-3L-Nc7" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="139" id="XUF-Ei-mYg"/>
+                            <constraint firstItem="zYc-bL-R5Y" firstAttribute="baseline" secondItem="tlt-UI-hsF" secondAttribute="baseline" type="default" id="ZNl-kt-k55"/>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="centerY" secondItem="jRZ-ai-Gvh" secondAttribute="centerY" type="default" id="qxs-KN-Go4"/>
+                            <constraint firstItem="jRZ-ai-Gvh" firstAttribute="leading" secondItem="o9m-7A-rGY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rHG-Ey-5Nc"/>
+                            <constraint firstItem="tlt-UI-hsF" firstAttribute="baseline" secondItem="jRZ-ai-Gvh" secondAttribute="baseline" type="default" id="u0A-jv-frr"/>
                             <constraint firstItem="BFE-tW-odk" firstAttribute="top" secondItem="o9m-7A-rGY" secondAttribute="top" type="default" id="ubf-NM-srl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kmK-Pk-dgc"/>
+                    <connections>
+                        <outlet property="agePicker" destination="Hok-k2-KXS" id="ITK-Mn-quD"/>
+                        <outlet property="ageTextField" destination="zYc-bL-R5Y" id="SFQ-ak-i52"/>
+                        <outlet property="pickerViewContainer" destination="snp-3L-Nc7" id="N77-pg-O0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcA-Ry-3Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1082,89 +1165,6 @@
         <image name="LegView_boy.png" width="1280" height="1200"/>
         <image name="TorsoView_boy.png" width="1280" height="1200"/>
     </resources>
-    <classes>
-        <class className="BodyView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BodyView.h"/>
-            <relationships>
-                <relationship kind="action" name="submitButton:"/>
-                <relationship kind="action" name="updateRecord:"/>
-                <relationship kind="outlet" name="ageTextFIeld" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="bodyPic" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="heightLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="heightTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="heightType" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weightLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weightTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightType" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HeadView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="headImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="LegView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LegView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="legImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="LogInList" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInList.h"/>
-            <relationships>
-                <relationship kind="action" name="createRecord:"/>
-                <relationship kind="outlet" name="gender" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MainMenu" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenu.h"/>
-            <relationships>
-                <relationship kind="action" name="logOut:"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="logoutButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="Record" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Record.h"/>
-            <relationships>
-                <relationship kind="action" name="nextMonth:"/>
-                <relationship kind="action" name="prevMonth:"/>
-                <relationship kind="outlet" name="heightLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="heightPLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="monthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="prevButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="weightLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weightPLabel" candidateClass="NSLayoutConstraint"/>
-            </relationships>
-        </class>
-        <class className="RecordList" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecordList.h"/>
-        </class>
-        <class className="Setting" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Setting.h"/>
-            <relationships>
-                <relationship kind="action" name="changeGender:"/>
-                <relationship kind="action" name="changeHeightSetting:"/>
-                <relationship kind="action" name="changeWeightSetting:"/>
-                <relationship kind="outlet" name="genderSC" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="heightSetting" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="weightSetting" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="TorsoView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TorsoView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="torsoImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

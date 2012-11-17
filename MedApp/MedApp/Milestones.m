@@ -64,9 +64,9 @@
     return [ageData objectAtIndex:row];
 }
 
-- (IBAction)tap:(id)sender {
-    pickerViewContainer.hidden = YES;
-}
+//- (IBAction)tap:(id)sender {
+  //  pickerViewContainer.hidden = YES;
+//}
 
 - (IBAction)showAge:(id)sender {
     pickerViewContainer.hidden = NO;

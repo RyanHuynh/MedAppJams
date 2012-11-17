@@ -37,7 +37,6 @@
 		5589D7281657B1CC009DD46B /* LegView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6F31657B1CC009DD46B /* LegView.m */; };
 		5589D72A1657B1CC009DD46B /* LogInList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6F71657B1CC009DD46B /* LogInList.m */; };
 		5589D72B1657B1CC009DD46B /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6F91657B1CC009DD46B /* MainMenu.m */; };
-		5589D72C1657B1CC009DD46B /* Milestone.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6FC1657B1CC009DD46B /* Milestone.m */; };
 		5589D72E1657B1CC009DD46B /* Milestones.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6FF1657B1CC009DD46B /* Milestones.m */; };
 		5589D72F1657B1CC009DD46B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D7011657B1CC009DD46B /* Model.m */; };
 		5589D7301657B1CC009DD46B /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D7031657B1CC009DD46B /* Record.m */; };
@@ -92,8 +91,6 @@
 		5589D6F71657B1CC009DD46B /* LogInList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInList.m; sourceTree = "<group>"; };
 		5589D6F81657B1CC009DD46B /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		5589D6F91657B1CC009DD46B /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
-		5589D6FB1657B1CC009DD46B /* Milestone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestone.h; sourceTree = "<group>"; };
-		5589D6FC1657B1CC009DD46B /* Milestone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestone.m; sourceTree = "<group>"; };
 		5589D6FE1657B1CC009DD46B /* Milestones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Milestones.h; sourceTree = "<group>"; };
 		5589D6FF1657B1CC009DD46B /* Milestones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Milestones.m; sourceTree = "<group>"; };
 		5589D7001657B1CC009DD46B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -226,8 +223,6 @@
 				5589D6F71657B1CC009DD46B /* LogInList.m */,
 				5589D6F81657B1CC009DD46B /* MainMenu.h */,
 				5589D6F91657B1CC009DD46B /* MainMenu.m */,
-				5589D6FB1657B1CC009DD46B /* Milestone.h */,
-				5589D6FC1657B1CC009DD46B /* Milestone.m */,
 				5589D6FE1657B1CC009DD46B /* Milestones.h */,
 				5589D6FF1657B1CC009DD46B /* Milestones.m */,
 				5589D7021657B1CC009DD46B /* Record.h */,
@@ -337,7 +332,6 @@
 				5589D7281657B1CC009DD46B /* LegView.m in Sources */,
 				5589D72A1657B1CC009DD46B /* LogInList.m in Sources */,
 				5589D72B1657B1CC009DD46B /* MainMenu.m in Sources */,
-				5589D72C1657B1CC009DD46B /* Milestone.m in Sources */,
 				5589D72E1657B1CC009DD46B /* Milestones.m in Sources */,
 				5589D72F1657B1CC009DD46B /* Model.m in Sources */,
 				5589D7301657B1CC009DD46B /* Record.m in Sources */,

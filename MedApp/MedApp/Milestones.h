@@ -24,9 +24,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
 
+
 @property (weak, nonatomic) IBOutlet UIView *pickerViewContainer;
 
-- (IBAction)tap:(id)sender;
+//- (IBAction)tap:(id)sender;
 - (IBAction)showAge:(id)sender;
 - (IBAction)pickerDone:(id)sender;
 
