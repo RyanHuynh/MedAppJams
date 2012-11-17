@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "555241131651FEC500E206F3"
+               BlueprintIdentifier = "5589D6A91657B158009DD46B"
                BuildableName = "MedApp.app"
                BlueprintName = "MedApp"
                ReferencedContainer = "container:MedApp.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "555241131651FEC500E206F3"
+            BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
             BlueprintName = "MedApp"
             ReferencedContainer = "container:MedApp.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "555241131651FEC500E206F3"
+            BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
             BlueprintName = "MedApp"
             ReferencedContainer = "container:MedApp.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "555241131651FEC500E206F3"
+            BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
             BlueprintName = "MedApp"
             ReferencedContainer = "container:MedApp.xcodeproj">

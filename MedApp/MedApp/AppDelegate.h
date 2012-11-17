@@ -1,13 +1,12 @@
 //
 //  AppDelegate.h
-//  App2
+//  MedApp
 //
-//  Created by Eiling Fernandez on 11/11/12.
-//  Copyright (c) 2012 UCI. All rights reserved.
+//  Created by Ryan Huynh on 11/17/12.
+//  Copyright (c) 2012 Ryan Huynh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
