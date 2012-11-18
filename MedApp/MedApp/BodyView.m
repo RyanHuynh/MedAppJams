@@ -378,23 +378,178 @@ static int heightModifier;
                     bh12, [NSNumber numberWithInt:12],
                     nil];
    
-    //Girl Weight Chart.
-    NSMutableDictionary *gw0 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                @"3rd Percentile for Height.", @"2.4",
-                                @"5th Percentile for Height.", @"2.5",
-                                @"10th Percentile for Height.", @"2.7",
-                                @"25th Percentile for Height.", @"3.1",
-                                @"50th Percentile for Height.", @"3.4",
-                                @"75th Percentile for Height.", @"3.7",
-                                @"90th Percentile for Height.", @"3.9",
-                                @"95th Percentile for Height.", @"4.1",
-                                @"97th Percentile for Height.", @"4.2",
-                                 @"GIRL", @"3.6",
+    NSMutableDictionary *wg0 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"2.4",
+                                @"5th Percentile for Weight.", @"2.5",
+                                @"10th Percentile for Weight.", @"2.7",
+                                @"25th Percentile for Weight.", @"3.0",
+                                @"50th Percentile for Weight.", @"3.3",
+                                @"75th Percentile for Weight.", @"3.7",
+                                @"90th Percentile for Weight.", @"3.9",
+                                @"95th Percentile for Weight.", @"4.1",
+                                @"97th Percentile for Weight.", @"4.2",
                                 nil];
+    
+    NSMutableDictionary *wg1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"3.4",
+                                @"5th Percentile for Weight.", @"3.5",
+                                @"10th Percentile for Weight.", @"3.7",
+                                @"25th Percentile for Weight.", @"4.1",
+                                @"50th Percentile for Weight.", @"4.5",
+                                @"75th Percentile for Weight.", @"4.9",
+                                @"90th Percentile for Weight.", @"5.3",
+                                @"95th Percentile for Weight.", @"5.5",
+                                @"97th Percentile for Weight.", @"5.6",
+                                nil];
+    
+    
+    NSMutableDictionary *wg2 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"3.9",
+                                @"5th Percentile for Weight.", @"4.1",
+                                @"10th Percentile for Weight.", @"4.3",
+                                @"25th Percentile for Weight.", @"4.7",
+                                @"50th Percentile for Weight.", @"5.2",
+                                @"75th Percentile for Weight.", @"5.6",
+                                @"90th Percentile for Weight.", @"6.0",
+                                @"95th Percentile for Weight.", @"6.3",
+                                @"97th Percentile for Weight.", @"6.4",
+                                nil];
+    
+    NSMutableDictionary *wg3 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"4.5",
+                                @"5th Percentile for Weight.", @"4.7",
+                                @"10th Percentile for Weight.", @"4.9",
+                                @"25th Percentile for Weight.", @"5.3",
+                                @"50th Percentile for Weight.", @"5.8",
+                                @"75th Percentile for Weight.", @"6.3",
+                                @"90th Percentile for Weight.", @"6.8",
+                                @"95th Percentile for Weight.", @"7.0",
+                                @"97th Percentile for Weight.", @"7.2",
+                                nil];
+    
+    NSMutableDictionary *wg4 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"5.0",
+                                @"5th Percentile for Weight.", @"5.2",
+                                @"10th Percentile for Weight.", @"5.4",
+                                @"25th Percentile for Weight.", @"5.9",
+                                @"50th Percentile for Weight.", @"6.4",
+                                @"75th Percentile for Weight.", @"6.9",
+                                @"90th Percentile for Weight.", @"7.4",
+                                @"95th Percentile for Weight.", @"7.7",
+                                @"97th Percentile for Weight.", @"7.9",
+                                nil];
+    
+    NSMutableDictionary *wg5 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"5.5",
+                                @"5th Percentile for Weight.", @"5.6",
+                                @"10th Percentile for Weight.", @"5.9",
+                                @"25th Percentile for Weight.", @"6.4",
+                                @"50th Percentile for Weight.", @"6.9",
+                                @"75th Percentile for Weight.", @"7.5",
+                                @"90th Percentile for Weight.", @"8.0",
+                                @"95th Percentile for Weight.", @"8.3",
+                                @"97th Percentile for Weight.", @"8.5",
+                                nil];
+    
+    NSMutableDictionary *wg6 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"5.9",
+                                @"5th Percentile for Weight.", @"6.1",
+                                @"10th Percentile for Weight.", @"6.4",
+                                @"25th Percentile for Weight.", @"6.8",
+                                @"50th Percentile for Weight.", @"7.4",
+                                @"75th Percentile for Weight.", @"8.0",
+                                @"90th Percentile for Weight.", @"8.6",
+                                @"95th Percentile for Weight.", @"8.9",
+                                @"97th Percentile for Weight.", @"9.1",
+                                nil];
+    
+    NSMutableDictionary *wg7 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"6.3",
+                                @"5th Percentile for Weight.", @"6.5",
+                                @"10th Percentile for Weight.", @"6.8",
+                                @"25th Percentile for Weight.", @"7.3",
+                                @"50th Percentile for Weight.", @"7.9",
+                                @"75th Percentile for Weight.", @"8.5",
+                                @"90th Percentile for Weight.", @"9.1",
+                                @"95th Percentile for Weight.", @"9.4",
+                                @"97th Percentile for Weight.", @"9.7",
+                                nil];
+    
+    NSMutableDictionary *wg8 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"6.7",
+                                @"5th Percentile for Weight.", @"6.9",
+                                @"10th Percentile for Weight.", @"7.1",
+                                @"25th Percentile for Weight.", @"7.7",
+                                @"50th Percentile for Weight.", @"8.3",
+                                @"75th Percentile for Weight.", @"8.9",
+                                @"90th Percentile for Weight.", @"9.5",
+                                @"95th Percentile for Weight.", @"9.9",
+                                @"97th Percentile for Weight.", @"10.2",
+                                nil];
+    
+    NSMutableDictionary *wg9 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                @"3rd Percentile for Weight.", @"7.0",
+                                @"5th Percentile for Weight.", @"7.2",
+                                @"10th Percentile for Weight.", @"7.5",
+                                @"25th Percentile for Weight.", @"8.0",
+                                @"50th Percentile for Weight.", @"8.6",
+                                @"75th Percentile for Weight.", @"9.3",
+                                @"90th Percentile for Weight.", @"10.0",
+                                @"95th Percentile for Weight.", @"10.4",
+                                @"97th Percentile for Weight.", @"10.6",
+                                nil];
+    
+    NSMutableDictionary *wg10 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 @"3rd Percentile for Weight.", @"7.3",
+                                 @"5th Percentile for Weight.", @"7.5",
+                                 @"10th Percentile for Weight.", @"7.8",
+                                 @"25th Percentile for Weight.", @"8.4",
+                                 @"50th Percentile for Weight.", @"9.0",
+                                 @"75th Percentile for Weight.", @"9.7",
+                                 @"90th Percentile for Weight.", @"10.3",
+                                 @"95th Percentile for Weight.", @"10.8",
+                                 @"97th Percentile for Weight.", @"11.0",
+                                 nil];
+    
+    NSMutableDictionary *wg11 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 @"3rd Percentile for Weight.", @"7.6",
+                                 @"5th Percentile for Weight.", @"7.8",
+                                 @"10th Percentile for Weight.", @"8.1",
+                                 @"25th Percentile for Weight.", @"8.7",
+                                 @"50th Percentile for Weight.", @"9.3",
+                                 @"75th Percentile for Weight.", @"10.0",
+                                 @"90th Percentile for Weight.", @"10.7",
+                                 @"95th Percentile for Weight.", @"11.1",
+                                 @"97th Percentile for Weight.", @"11.4",
+                                 nil];
+    
+    NSMutableDictionary *wg12 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 @"3rd Percentile for Weight.", @"7.9",
+                                 @"5th Percentile for Weight.", @"8.1",
+                                 @"10th Percentile for Weight.", @"8.4",
+                                 @"25th Percentile for Weight.", @"8.9",
+                                 @"50th Percentile for Weight.", @"9.6",
+                                 @"75th Percentile for Weight.", @"10.3",
+                                 @"90th Percentile for Weight.", @"11.1",
+                                 @"95th Percentile for Weight.", @"11.5",
+                                 @"97th Percentile for Weight.", @"11.8",
+                                 nil];
     weightChartG = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
-                    gw0, [NSNumber numberWithInt:0],
+                    wg0, [NSNumber numberWithInt:0],
+                    wg1, [NSNumber numberWithInt:0],
+                    wg2, [NSNumber numberWithInt:0],
+                    wg3, [NSNumber numberWithInt:0],
+                    wg4, [NSNumber numberWithInt:0],
+                    wg5, [NSNumber numberWithInt:0],
+                    wg6, [NSNumber numberWithInt:0],
+                    wg7, [NSNumber numberWithInt:0],
+                    wg8, [NSNumber numberWithInt:0],
+                    wg9, [NSNumber numberWithInt:0],
+                    wg10, [NSNumber numberWithInt:0],
+                    wg11, [NSNumber numberWithInt:0],
+                    wg12, [NSNumber numberWithInt:0],
                                        nil];
- 
+    
     //Girl Height Chart
     NSMutableDictionary *gh0 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                 @"3rd Percentile for Height.", @"45.0",

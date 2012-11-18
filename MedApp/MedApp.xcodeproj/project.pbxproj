@@ -15,7 +15,6 @@
 		5589D6BF1657B158009DD46B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6BE1657B158009DD46B /* AppDelegate.m */; };
 		5589D6C11657B158009DD46B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C01657B158009DD46B /* Default.png */; };
 		5589D6C51657B158009DD46B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C41657B158009DD46B /* Default-568h@2x.png */; };
-		5589D7131657B1CC009DD46B /* appjam_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6D81657B1CC009DD46B /* appjam_icon_72x72.png */; };
 		5589D7141657B1CC009DD46B /* appjam_milestone1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6D91657B1CC009DD46B /* appjam_milestone1.png */; };
 		5589D7151657B1CC009DD46B /* appjam_milestone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */; };
 		5589D7161657B1CC009DD46B /* appjam_milestone3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */; };
@@ -26,8 +25,6 @@
 		5589D71C1657B1CC009DD46B /* BodyView_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6E11657B1CC009DD46B /* BodyView_boy.png */; };
 		5589D71D1657B1CC009DD46B /* BodyView_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6E21657B1CC009DD46B /* BodyView_girl.png */; };
 		5589D71E1657B1CC009DD46B /* BodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6E41657B1CC009DD46B /* BodyView.m */; };
-		5589D71F1657B1CC009DD46B /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6E51657B1CC009DD46B /* boy.png */; };
-		5589D7221657B1CC009DD46B /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6EB1657B1CC009DD46B /* girl.png */; };
 		5589D7231657B1CC009DD46B /* HeadView_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6EC1657B1CC009DD46B /* HeadView_boy.png */; };
 		5589D7241657B1CC009DD46B /* HeadView_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6ED1657B1CC009DD46B /* HeadView_girl.png */; };
 		5589D7251657B1CC009DD46B /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6EF1657B1CC009DD46B /* HeadView.m */; };
@@ -61,7 +58,6 @@
 		5589D6C01657B158009DD46B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5589D6C21657B158009DD46B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5589D6C41657B158009DD46B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5589D6D81657B1CC009DD46B /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
 		5589D6D91657B1CC009DD46B /* appjam_milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone1.png; sourceTree = "<group>"; };
 		5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone2.png; sourceTree = "<group>"; };
 		5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone3.png; sourceTree = "<group>"; };
@@ -73,8 +69,6 @@
 		5589D6E21657B1CC009DD46B /* BodyView_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BodyView_girl.png; sourceTree = "<group>"; };
 		5589D6E31657B1CC009DD46B /* BodyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyView.h; sourceTree = "<group>"; };
 		5589D6E41657B1CC009DD46B /* BodyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyView.m; sourceTree = "<group>"; };
-		5589D6E51657B1CC009DD46B /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
-		5589D6EB1657B1CC009DD46B /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		5589D6EC1657B1CC009DD46B /* HeadView_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadView_boy.png; sourceTree = "<group>"; };
 		5589D6ED1657B1CC009DD46B /* HeadView_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadView_girl.png; sourceTree = "<group>"; };
 		5589D6EE1657B1CC009DD46B /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
@@ -149,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				55C4D2341658240F0031D59C /* View-Controller */,
-				55C4D232165823FA0031D59C /* Model */,
 				5589D7381657B207009DD46B /* Image */,
 				5589D7391657B33A009DD46B /* MainStoryboard.storyboard */,
 				5589D6B51657B158009DD46B /* Supporting Files */,
@@ -178,11 +171,8 @@
 				5589D7091657B1CC009DD46B /* TorsoView_girl.png */,
 				5589D6F01657B1CC009DD46B /* LegView_boy.png */,
 				5589D6F11657B1CC009DD46B /* LegView_girl.png */,
-				5589D6E51657B1CC009DD46B /* boy.png */,
-				5589D6EB1657B1CC009DD46B /* girl.png */,
 				5589D6EC1657B1CC009DD46B /* HeadView_boy.png */,
 				5589D6ED1657B1CC009DD46B /* HeadView_girl.png */,
-				5589D6D81657B1CC009DD46B /* appjam_icon_72x72.png */,
 				5589D6D91657B1CC009DD46B /* appjam_milestone1.png */,
 				5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */,
 				5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */,
@@ -196,18 +186,11 @@
 			name = Image;
 			sourceTree = "<group>";
 		};
-		55C4D232165823FA0031D59C /* Model */ = {
+		55C4D2341658240F0031D59C /* View-Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5589D7001657B1CC009DD46B /* Model.h */,
 				5589D7011657B1CC009DD46B /* Model.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		55C4D2341658240F0031D59C /* View-Controller */ = {
-			isa = PBXGroup;
-			children = (
 				5589D6E31657B1CC009DD46B /* BodyView.h */,
 				5589D6E41657B1CC009DD46B /* BodyView.m */,
 				5589D6EE1657B1CC009DD46B /* HeadView.h */,
@@ -288,7 +271,6 @@
 				5589D6B91657B158009DD46B /* InfoPlist.strings in Resources */,
 				5589D6C11657B158009DD46B /* Default.png in Resources */,
 				5589D6C51657B158009DD46B /* Default-568h@2x.png in Resources */,
-				5589D7131657B1CC009DD46B /* appjam_icon_72x72.png in Resources */,
 				5589D7141657B1CC009DD46B /* appjam_milestone1.png in Resources */,
 				5589D7151657B1CC009DD46B /* appjam_milestone2.png in Resources */,
 				5589D7161657B1CC009DD46B /* appjam_milestone3.png in Resources */,
@@ -298,8 +280,6 @@
 				5589D71A1657B1CC009DD46B /* appjam_milestone7.png in Resources */,
 				5589D71C1657B1CC009DD46B /* BodyView_boy.png in Resources */,
 				5589D71D1657B1CC009DD46B /* BodyView_girl.png in Resources */,
-				5589D71F1657B1CC009DD46B /* boy.png in Resources */,
-				5589D7221657B1CC009DD46B /* girl.png in Resources */,
 				5589D7231657B1CC009DD46B /* HeadView_boy.png in Resources */,
 				5589D7241657B1CC009DD46B /* HeadView_girl.png in Resources */,
 				5589D7261657B1CC009DD46B /* LegView_boy.png in Resources */,

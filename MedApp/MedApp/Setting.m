@@ -7,8 +7,6 @@
 //
 
 #import "Setting.h"
-
-
 @interface Setting ()
 
 @end
@@ -40,8 +38,9 @@
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if([[[Model uniqueModel] weightSetting] isEqualToString:@"(Kilogram)"])
-        weightSetting.selectedSegmentIndex = 0;
+    NSLog([[Model uniqueModel] weightSetting]);
+    if([[[Model uniqueModel] weightSetting] isEqualToString:@"(Kilogram)"]){ NSLog([[Model uniqueModel] weightSetting]);
+        weightSetting.selectedSegmentIndex = 0;}
     else
         weightSetting.selectedSegmentIndex = 1;
     if([[[Model uniqueModel] heightSetting] isEqualToString:@"(Centimeter)"])
@@ -54,7 +53,7 @@
     }
     else
         genderSC.selectedSegmentIndex = 1;
-
+    NSLog(@"END");
 }
 
 
@@ -64,7 +63,7 @@
     {
         [[Model uniqueModel] changeWeightSetting:@"(Kilogram)"];
         [[Model uniqueModel] changeWeightModifier:1];
-        
+        NSLog(@"lol");
     }
     else
         [[Model uniqueModel] changeWeightSetting:@"(Pound)"];

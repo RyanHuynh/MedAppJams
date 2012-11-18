@@ -268,7 +268,6 @@
                         <constraints>
                             <constraint firstItem="6q8-Ap-wm8" firstAttribute="top" secondItem="N1n-8h-0Td" secondAttribute="top" type="default" id="0Tv-rp-sTe"/>
                             <constraint firstItem="fwy-7S-Nav" firstAttribute="leading" secondItem="N1n-8h-0Td" secondAttribute="leading" type="default" id="2yZ-tD-oh6"/>
-                            <constraint firstItem="fwy-7S-Nav" firstAttribute="trailing" secondItem="N1n-8h-0Td" secondAttribute="trailing" type="default" id="Ikg-VG-8M2"/>
                             <constraint firstItem="0pt-vu-QhF" firstAttribute="leading" secondItem="N1n-8h-0Td" secondAttribute="leading" type="default" id="WX4-yv-pEJ"/>
                             <constraint firstItem="0pt-vu-QhF" firstAttribute="trailing" secondItem="N1n-8h-0Td" secondAttribute="trailing" type="default" id="ZoN-SW-D7u"/>
                             <constraint firstItem="6q8-Ap-wm8" firstAttribute="trailing" secondItem="N1n-8h-0Td" secondAttribute="trailing" type="default" id="ciX-xP-6Cj"/>
@@ -310,11 +309,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HeadView_boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxZ-vJ-VSm">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="915" id="fGM-JE-VG9"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HeadView_boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxZ-vJ-VSm"/>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vg-0e-rBC">
                                 <items>
                                     <barButtonItem title="Submit" id="lSf-Ux-mmg"/>
@@ -494,7 +489,6 @@
                             <constraint firstItem="UIE-LP-LWB" firstAttribute="leading" secondItem="Ktu-cb-OKw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="p1v-o0-j20"/>
                             <constraint firstItem="kkh-X1-9zf" firstAttribute="leading" secondItem="Nal-gZ-7ff" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pjb-JB-W7r"/>
                             <constraint firstItem="16S-9G-J0x" firstAttribute="baseline" secondItem="vPl-va-fUm" secondAttribute="baseline" type="default" id="qWk-bH-XPL"/>
-                            <constraint firstItem="sxZ-vJ-VSm" firstAttribute="trailing" secondItem="qkn-V6-gvg" secondAttribute="trailing" type="default" id="qzU-YD-0XI"/>
                             <constraint firstItem="TgK-SM-D95" firstAttribute="baseline" secondItem="ya9-MF-gvG" secondAttribute="baseline" type="default" id="rwK-gd-heP"/>
                             <constraint firstItem="GDD-ou-tGw" firstAttribute="leading" secondItem="NwU-lJ-PWs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sKP-Yz-zyo"/>
                             <constraint firstItem="5vg-0e-rBC" firstAttribute="trailing" secondItem="qkn-V6-gvg" secondAttribute="trailing" type="default" id="tIM-oo-jDs"/>
@@ -550,11 +544,7 @@
                                     <barButtonItem title="Update record" id="iPK-yz-B8V"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="LegView_boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-uE-fxV">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="915" id="gYY-pJ-qGt"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="LegView_boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-uE-fxV"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -562,7 +552,6 @@
                             <constraint firstItem="nGf-ju-NXX" firstAttribute="leading" secondItem="1k0-oF-ab3" secondAttribute="leading" type="default" id="Lba-jq-7cD"/>
                             <constraint firstItem="9Bq-tb-p0q" firstAttribute="leading" secondItem="1k0-oF-ab3" secondAttribute="leading" type="default" id="NV2-BB-Q00"/>
                             <constraint firstItem="nGf-ju-NXX" firstAttribute="bottom" secondItem="Qe2-uE-fxV" secondAttribute="top" type="default" id="P16-KJ-DUa"/>
-                            <constraint firstItem="Qe2-uE-fxV" firstAttribute="trailing" secondItem="1k0-oF-ab3" secondAttribute="trailing" type="default" id="Xu1-dN-rQF"/>
                             <constraint firstItem="9Bq-tb-p0q" firstAttribute="bottom" secondItem="1k0-oF-ab3" secondAttribute="bottom" type="default" id="ZWE-Ss-fdJ"/>
                             <constraint firstItem="nGf-ju-NXX" firstAttribute="trailing" secondItem="1k0-oF-ab3" secondAttribute="trailing" type="default" id="fGd-zb-SjA"/>
                             <constraint firstItem="9Bq-tb-p0q" firstAttribute="trailing" secondItem="1k0-oF-ab3" secondAttribute="trailing" type="default" id="gMo-Mv-1ZG"/>
@@ -989,7 +978,7 @@
         <scene sceneID="cBD-56-GpC">
             <objects>
                 <viewController id="R2G-Ic-yC4" userLabel="Setting" customClass="Setting" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GqO-Va-OJe" customClass="s">
+                    <view key="view" contentMode="scaleToFill" id="GqO-Va-OJe">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1026,7 +1015,7 @@
                                     <segment title="Pound"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeWeightSetting:" destination="R2G-Ic-yC4" eventType="valueChanged" id="GtO-8F-cMN"/>
+                                    <action selector="changeWeightSetting:" destination="R2G-Ic-yC4" eventType="valueChanged" id="WUJ-00-oVI"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5cD-vh-8Kt">
@@ -1038,7 +1027,7 @@
                                     <segment title="Inch"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeHeightSetting:" destination="R2G-Ic-yC4" eventType="valueChanged" id="eI1-Ms-bmb"/>
+                                    <action selector="changeHeightSetting:" destination="R2G-Ic-yC4" eventType="valueChanged" id="CNc-NW-AXN"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-s0-0gg">
@@ -1055,7 +1044,7 @@
                                     <segment title="Girl"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeGender:" destination="R2G-Ic-yC4" eventType="valueChanged" id="nCd-YN-vD9"/>
+                                    <action selector="changeGender:" destination="R2G-Ic-yC4" eventType="valueChanged" id="ZXp-Bz-FVd"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -1083,9 +1072,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="genderSC" destination="NHu-pv-DtL" id="pdd-XQ-VGY"/>
-                        <outlet property="heightSetting" destination="5cD-vh-8Kt" id="efs-b8-Juc"/>
-                        <outlet property="weightSetting" destination="1FQ-j7-0tm" id="qgD-Kt-cAd"/>
+                        <outlet property="genderSC" destination="NHu-pv-DtL" id="F9f-gr-9JJ"/>
+                        <outlet property="heightSetting" destination="5cD-vh-8Kt" id="dOx-6D-ecU"/>
+                        <outlet property="weightSetting" destination="1FQ-j7-0tm" id="7OF-Mr-1mQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvZ-hU-XzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1351,9 +1340,9 @@
     </scenes>
     <resources>
         <image name="BodyView_boy.png" width="1114" height="1269"/>
-        <image name="HeadView_boy.png" width="1280" height="1200"/>
-        <image name="LegView_boy.png" width="1280" height="1200"/>
-        <image name="TorsoView_boy.png" width="1280" height="1200"/>
+        <image name="HeadView_boy.png" width="768" height="915"/>
+        <image name="LegView_boy.png" width="768" height="915"/>
+        <image name="TorsoView_boy.png" width="768" height="915"/>
     </resources>
     <classes>
         <class className="BodyView" superclassName="UIViewController">
@@ -1455,8 +1444,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="CCA-YW-OWZ"/>
-        <segue reference="Uwx-1v-oX1"/>
         <segue reference="OH9-1T-bqY"/>
+        <segue reference="RMr-yR-Dk4"/>
         <segue reference="Qhw-s0-MGR"/>
     </inferredMetricsTieBreakers>
 </document>

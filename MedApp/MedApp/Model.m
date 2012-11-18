@@ -27,7 +27,7 @@ static int uniqueId;
 	@synchronized([Model class])
 	{
 		if (!_uniqueModel)
-			//[[self alloc] init];
+			[[self alloc] init];
 		return _uniqueModel;
 	}
 	return nil;
@@ -49,7 +49,7 @@ static int uniqueId;
 	if (self != nil) {
 		// initialize stuff here
         gender =@"Boy";
-        weightSetting =@"(Kilogram)";
+        weightSetting = @"(Kilogram)";
         heightSetting=@"(Centimeter)";
         weightModifier = 1;
         heightModifier = 1;
@@ -74,6 +74,7 @@ static int uniqueId;
 -(void) changeWeightSetting:(NSString*) _weightSetting
 {
     weightSetting = _weightSetting;
+    NSLog(weightSetting);
 }
 -(void) changeWeightModifier:(int) modifier
 {
@@ -145,8 +146,6 @@ static int uniqueId;
         double weightN = [weight doubleValue] * 0.453592;
         weight = [NSString stringWithFormat:@"%f", weightN];
     }
-    
-    
     if([heightSetting isEqualToString:@"Inch"]){
         double heightN = [weight doubleValue] * 2.54;
         height = [NSString stringWithFormat:@"%f", heightN];
@@ -155,6 +154,7 @@ static int uniqueId;
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:weight forKey:@"weight"];
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:heightP forKey:@"weightP"];
     [[[log objectForKey:selectedRecord] objectAtIndex:month] setObject:weightP forKey:@"heightP"];
+   
 }
 
 -(NSString*) getSelectedRecordName

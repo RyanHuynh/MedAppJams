@@ -34,38 +34,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MedApp/Model.m"
-         timestampString = "374880134.303907"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
-         landmarkName = "-bodyViewUpdate:::::"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MedApp/Model.m"
-         timestampString = "374880134.303907"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
-         landmarkName = "-getRecordForMonth:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MedApp/Model.m"
-         timestampString = "374880625.402102"
+         timestampString = "374892507.40567"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "148"
          endingLineNumber = "148"
          landmarkName = "-bodyViewUpdate:::::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MedApp/Model.m"
+         timestampString = "374892507.40567"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
+         landmarkName = "-getRecordForMonth:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -79,6 +66,32 @@
          startingLineNumber = "186"
          endingLineNumber = "186"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MedApp/Setting.m"
+         timestampString = "374891560.197967"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-viewWillAppear:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MedApp/Model.m"
+         timestampString = "374891680.714136"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
