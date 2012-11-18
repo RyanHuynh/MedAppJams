@@ -18,8 +18,8 @@
 @synthesize selectedRecord;
 
 static Model* _uniqueModel = nil;
-static int weightModifier;
-static int heightModifier;
+static double weightModifier;
+static double heightModifier;
 static int uniqueId;
 
 +(Model *)uniqueModel
@@ -74,23 +74,22 @@ static int uniqueId;
 -(void) changeWeightSetting:(NSString*) _weightSetting
 {
     weightSetting = _weightSetting;
-    NSLog(weightSetting);
-}
--(void) changeWeightModifier:(int) modifier
+   }
+-(void) changeWeightModifier:(double) modifier
 {
     weightModifier = modifier;
 }
 
--(void) changeHeightModifier:(int) modifier
+-(void) changeHeightModifier:(double) modifier
 {
     heightModifier = modifier;
 }
 
--(int) getWeightModifier
+-(double) getWeightModifier
 {
     return weightModifier;
 }
--(int) getHeightModifier
+-(double) getHeightModifier
 {
     return heightModifier;
 }

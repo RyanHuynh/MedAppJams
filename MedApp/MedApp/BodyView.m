@@ -16,7 +16,7 @@
 @implementation BodyView
 
 @synthesize heightTextField;
-
+@synthesize headTextField;
 @synthesize weightTextField;
 @synthesize heightLabel;
 @synthesize weightLabel;
@@ -28,6 +28,7 @@
 @synthesize bodyPic;
 @synthesize weightChartUse;
 @synthesize heightChartUse;
+@synthesize headChartUse;
 @synthesize singlePickerComponent;
 @synthesize ageData;
 @synthesize heightType;
@@ -40,8 +41,9 @@
 @synthesize weightAvg;
 @synthesize heightAvg;
 @synthesize headAvg;
-
-
+@synthesize headLabel;
+@synthesize headChartB;
+@synthesize headChartG;
 static int weightModifier;
 static int heightModifier;
 
@@ -720,6 +722,333 @@ static int heightModifier;
                     gh11, [NSNumber numberWithInt:11],
                     gh12, [NSNumber numberWithInt:12],
                     nil];
+    
+    //Boy head chart
+    NSMutableDictionary *bhead0 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"31.4",
+                                   @"5th Percentile for Head.", @"32.1",
+                                   @"10th Percentile for Head.", @"33.0",
+                                   @"25th Percentile for Head.", @"34.4",
+                                   @"50th Percentile for Head.", @"35.8",
+                                   @"75th Percentile for Head.", @"37.0",
+                                   @"90th Percentile for Head.", @"37.9",
+                                   @"95th Percentile for Head.", @"38.5",
+                                   @"97th Percentile for Head.", @"38.8",
+                                   nil];
+    NSMutableDictionary *bhead1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"35.7",
+                                   @"5th Percentile for Head.", @"36.2",
+                                   @"10th Percentile for Head.", @"36.9",
+                                   @"25th Percentile for Head.", @"38.0",
+                                   @"50th Percentile for Head.", @"39.2",
+                                   @"75th Percentile for Head.", @"40.2",
+                                   @"90th Percentile for Head.", @"41.1",
+                                   @"95th Percentile for Head.", @"41.6",
+                                   @"97th Percentile for Head.", @"41.9",
+                                   nil];
+    NSMutableDictionary *bhead2 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"37.5",
+                                   @"5th Percentile for Head.", @"37.9",
+                                   @"10th Percentile for Head.", @"38.6",
+                                   @"25th Percentile for Head.", @"39.6",
+                                   @"50th Percentile for Head.", @"40.6",
+                                   @"75th Percentile for Head.", @"41.6",
+                                   @"90th Percentile for Head.", @"42.4",
+                                   @"95th Percentile for Head.", @"42.9",
+                                   @"97th Percentile for Head.", @"43.2",
+                                   nil];
+    NSMutableDictionary *bhead3 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"38.8",
+                                   @"5th Percentile for Head.", @"39.2",
+                                   @"10th Percentile for Head.", @"39.8",
+                                   @"25th Percentile for Head.", @"40.7",
+                                   @"50th Percentile for Head.", @"41.7",
+                                   @"75th Percentile for Head.", @"42.7",
+                                   @"90th Percentile for Head.", @"43.5",
+                                   @"95th Percentile for Head.", @"44.0",
+                                   @"97th Percentile for Head.", @"44.3",
+                                   nil];
+    NSMutableDictionary *bhead4 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"39.9",
+                                   @"5th Percentile for Head.", @"40.3",
+                                   @"10th Percentile for Head.", @"40.8",
+                                   @"25th Percentile for Head.", @"41.7",
+                                   @"50th Percentile for Head.", @"42.6",
+                                   @"75th Percentile for Head.", @"43.5",
+                                   @"90th Percentile for Head.", @"44.3",
+                                   @"95th Percentile for Head.", @"44.8",
+                                   @"97th Percentile for Head.", @"45.1",
+                                   nil];
+    NSMutableDictionary *bhead5 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"40.8",
+                                   @"5th Percentile for Head.", @"41.1",
+                                   @"10th Percentile for Head.", @"41.6",
+                                   @"25th Percentile for Head.", @"42.4",
+                                   @"50th Percentile for Head.", @"43.4",
+                                   @"75th Percentile for Head.", @"44.3",
+                                   @"90th Percentile for Head.", @"45.1",
+                                   @"95th Percentile for Head.", @"45.5",
+                                   @"97th Percentile for Head.", @"45.8",
+                                   nil];
+    NSMutableDictionary *bhead6 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"41.5",
+                                   @"5th Percentile for Head.", @"41.8",
+                                   @"10th Percentile for Head.", @"42.3",
+                                   @"25th Percentile for Head.", @"43.1",
+                                   @"50th Percentile for Head.", @"44.0",
+                                   @"75th Percentile for Head.", @"44.9",
+                                   @"90th Percentile for Head.", @"45.7",
+                                   @"95th Percentile for Head.", @"46.1",
+                                   @"97th Percentile for Head.", @"46.5",
+                                   nil];
+    NSMutableDictionary *bhead7 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"42.1",
+                                   @"5th Percentile for HHead.", @"42.4",
+                                   @"10th Percentile for Head.", @"42.9",
+                                   @"25th Percentile for Head.", @"43.7",
+                                   @"50th Percentile for Head.", @"44.5",
+                                   @"75th Percentile for Head.", @"45.4",
+                                   @"90th Percentile for Head.", @"46.2",
+                                   @"95th Percentile for Head.", @"46.7",
+                                   @"97th Percentile for Head.", @"47.0",
+                                   nil];
+    NSMutableDictionary *bhead8 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"42.6",
+                                   @"5th Percentile for Head.", @"42.9",
+                                   @"10th Percentile for Head.", @"43.4",
+                                   @"25th Percentile for Head.", @"44.1",
+                                   @"50th Percentile for Head.", @"45.0",
+                                   @"75th Percentile for Head.", @"45.9",
+                                   @"90th Percentile for Head.", @"46.7",
+                                   @"95th Percentile for Head.", @"47.1",
+                                   @"97th Percentile for Head.", @"47.5",
+                                   nil];
+    NSMutableDictionary *bhead9 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"43.1",
+                                   @"5th Percentile for Head.", @"43.3",
+                                   @"10th Percentile for Head.", @"43.8",
+                                   @"25th Percentile for Head.", @"44.6",
+                                   @"50th Percentile for Head.", @"45.4",
+                                   @"75th Percentile for Head.", @"46.3",
+                                   @"90th Percentile for Head.", @"47.1",
+                                   @"95th Percentile for Head.", @"47.6",
+                                   @"97th Percentile for Head.", @"47.9",
+                                   nil];
+    NSMutableDictionary *bhead10 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"43.4",
+                                    @"5th Percentile for Head.", @"43.7",
+                                    @"10th Percentile for Head.", @"44.2",
+                                    @"25th Percentile for Head.", @"44.9",
+                                    @"50th Percentile for Head.", @"45.8",
+                                    @"75th Percentile for Head.", @"46.7",
+                                    @"90th Percentile for Head.", @"47.5",
+                                    @"95th Percentile for Head.", @"47.9",
+                                    @"97th Percentile for Head.", @"48.3",
+                                    nil];
+    NSMutableDictionary *bhead11 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"43.8",
+                                    @"5th Percentile for Head.", @"44.1",
+                                    @"10th Percentile for Head.", @"44.5",
+                                    @"25th Percentile for Head.", @"45.3",
+                                    @"50th Percentile for Head.", @"46.1",
+                                    @"75th Percentile for Head.", @"47.0",
+                                    @"90th Percentile for Head.", @"47.8",
+                                    @"95th Percentile for Head.", @"48.3",
+                                    @"97th Percentile for Head.", @"48.6",
+                                    nil];
+    NSMutableDictionary *bhead12 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"44.1",
+                                    @"5th Percentile for Head", @"44.4",
+                                    @"10th Percentile for Head.", @"44.8",
+                                    @"25th Percentile for Head.", @"45.6",
+                                    @"50th Percentile for Head.", @"46.4",
+                                    @"75th Percentile for Head.", @"47.3",
+                                    @"90th Percentile for Head.", @"48.1",
+                                    @"95th Percentile for Head.", @"48.6",
+                                    @"97th Percentile for Head.", @"48.9",
+                                    nil];
+   headChartB = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                    bhead0, [NSNumber numberWithInt:0],
+                     bhead1, [NSNumber numberWithInt:1],
+                     bhead2, [NSNumber numberWithInt:2],
+                     bhead3, [NSNumber numberWithInt:3],
+                     bhead4, [NSNumber numberWithInt:4],
+                     bhead5, [NSNumber numberWithInt:5],
+                    bhead6, [NSNumber numberWithInt:6],
+                    bhead7, [NSNumber numberWithInt:7],
+                    bhead8, [NSNumber numberWithInt:8],
+                    bhead9, [NSNumber numberWithInt:9],
+                    bhead10, [NSNumber numberWithInt:10],
+                    bhead11, [NSNumber numberWithInt:11],
+                    bhead12, [NSNumber numberWithInt:12],
+                    nil];
+
+    
+    //Girl head chart
+    NSMutableDictionary *ghead0 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"31.9",
+                                   @"5th Percentile for Head.", @"32.2",
+                                   @"10th Percentile for Head.", @"32.7",
+                                   @"25th Percentile for Head.", @"33.6",
+                                   @"50th Percentile for Head.", @"34.7",
+                                   @"75th Percentile for Head.", @"35.8",
+                                   @"90th Percentile for Head.", @"36.9",
+                                   @"95th Percentile for Head.", @"37.6",
+                                   @"97th Percentile for Head.", @"38.1",
+                                   nil];
+    NSMutableDictionary *ghead1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"35.4",
+                                   @"5th Percentile for Head.", @"35.7",
+                                   @"10th Percentile for Head.", @"36.2",
+                                   @"25th Percentile for Head.", @"37.0",
+                                   @"50th Percentile for Head.", @"37.9",
+                                   @"75th Percentile for Head.", @"38.9",
+                                   @"90th Percentile for Head.", @"39.9",
+                                   @"95th Percentile for Head.", @"40.5",
+                                   @"97th Percentile for Head.", @"40.9",
+                                   nil];
+    NSMutableDictionary *ghead2 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"36.9",
+                                   @"5th Percentile for Head.", @"37.2",
+                                   @"10th Percentile for Head.", @"37.7",
+                                   @"25th Percentile for Head.", @"38.4",
+                                   @"50th Percentile for Head.", @"39.3",
+                                   @"75th Percentile for Head.", @"40.3",
+                                   @"90th Percentile for Head.", @"41.2",
+                                   @"95th Percentile for Head.", @"41.8",
+                                   @"97th Percentile for Head.", @"42.2",
+                                   nil];
+    
+    NSMutableDictionary *ghead3 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"38.1",
+                                   @"5th Percentile for Head.", @"38.4",
+                                   @"10th Percentile for Head.", @"38.8",
+                                   @"25th Percentile for Head.", @"39.5",
+                                   @"50th Percentile for Head.", @"40.4",
+                                   @"75th Percentile for Head.", @"41.3",
+                                   @"90th Percentile for Head.", @"42.2",
+                                   @"95th Percentile for Head.", @"42.8",
+                                   @"97th Percentile for Head.", @"43.2",
+                                   nil];
+    NSMutableDictionary *ghead4 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"39.0",
+                                   @"5th Percentile for Head.", @"39.3",
+                                   @"10th Percentile for Head.", @"39.7",
+                                   @"25th Percentile for Head.", @"40.4",
+                                   @"50th Percentile for Head.", @"41.3",
+                                   @"75th Percentile for Head.", @"42.2",
+                                   @"90th Percentile for Head.", @"43.1",
+                                   @"95th Percentile for Head.", @"43.6",
+                                   @"97th Percentile for Head.", @"44.0",
+                                   nil];
+    NSMutableDictionary *ghead5 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"39.7",
+                                   @"5th Percentile for Head.", @"40.0",
+                                   @"10th Percentile for Head.", @"40.4",
+                                   @"25th Percentile for Head.", @"41.2",
+                                   @"50th Percentile for Head.", @"42.0",
+                                   @"75th Percentile for Head.", @"42.9",
+                                   @"90th Percentile for Head.", @"43.8",
+                                   @"95th Percentile for Head.", @"44.3",
+                                   @"97th Percentile for Head.", @"44.6",
+                                   nil];
+    NSMutableDictionary *ghead6 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"40.4",
+                                   @"5th Percentile for Head.", @"40.7",
+                                   @"10th Percentile for Head.", @"41.1",
+                                   @"25th Percentile for Head.", @"41.8",
+                                   @"50th Percentile for Head.", @"42.7",
+                                   @"75th Percentile for Head.", @"43.5",
+                                   @"90th Percentile for Head.", @"44.4",
+                                   @"95th Percentile for Head.", @"44.9",
+                                   @"97th Percentile for Head.", @"45.2",
+                                   nil];
+    NSMutableDictionary *ghead7 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"40.9",
+                                   @"5th Percentile for Head.", @"41.2",
+                                   @"10th Percentile for Head.", @"41.6",
+                                   @"25th Percentile for Head.", @"42.4",
+                                   @"50th Percentile for Head.", @"43.2",
+                                   @"75th Percentile for Head.", @"44.1",
+                                   @"90th Percentile for Head.", @"44.9",
+                                   @"95th Percentile for Head.", @"45.4",
+                                   @"97th Percentile for Head.", @"45.7",
+                                   nil];
+    NSMutableDictionary *ghead8 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"41.4",
+                                   @"5th Percentile for Head.", @"41.7",
+                                   @"10th Percentile for Head.", @"42.1",
+                                   @"25th Percentile for Head.", @"42.8",
+                                   @"50th Percentile for Head.", @"43.7",
+                                   @"75th Percentile for Head.", @"44.6",
+                                   @"90th Percentile for Head.", @"45.4",
+                                   @"95th Percentile for Head.", @"45.9",
+                                   @"97th Percentile for Head.", @"46.2",
+                                   nil];
+    
+    NSMutableDictionary *ghead9 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                   @"3rd Percentile for Head.", @"41.8",
+                                   @"5th Percentile for Head.", @"42.1",
+                                   @"10th Percentile for Head.", @"42.5",
+                                   @"25th Percentile for Head.", @"43.3",
+                                   @"50th Percentile for Head.", @"44.1",
+                                   @"75th Percentile for Head.", @"45.0",
+                                   @"90th Percentile for Head.", @"45.8",
+                                   @"95th Percentile for Head.", @"46.3",
+                                   @"97th Percentile for Head.", @"46.6",
+                                   nil];
+    NSMutableDictionary *ghead10 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"42.2",
+                                    @"5th Percentile for Head.", @"42.5",
+                                    @"10th Percentile for Head.", @"42.9",
+                                    @"25th Percentile for Head.", @"43.6",
+                                    @"50th Percentile for Head.", @"44.5",
+                                    @"75th Percentile for Head.", @"45.4",
+                                    @"90th Percentile for Head.", @"46.2",
+                                    @"95th Percentile for Head.", @"46.6",
+                                    @"97th Percentile for Head.", @"47.0",
+                                    nil];
+    NSMutableDictionary *ghead11 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"42.5",
+                                    @"5th Percentile for Head.", @"42.8",
+                                    @"10th Percentile for Head.", @"43.2",
+                                    @"25th Percentile for Head.", @"44.0",
+                                    @"50th Percentile for Head.", @"44.8",
+                                    @"75th Percentile for Head.", @"45.7",
+                                    @"90th Percentile for Head.", @"46.5",
+                                    @"95th Percentile for Head.", @"47.0",
+                                    @"97th Percentile for Head.", @"47.3",
+                                    nil];
+    
+    NSMutableDictionary *ghead12 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"3rd Percentile for Head.", @"42.8",
+                                    @"5th Percentile for Head.", @"43.1",
+                                    @"10th Percentile for Head.", @"43.5",
+                                    @"25th Percentile for Head.", @"44.3",
+                                    @"50th Percentile for Head.", @"45.1",
+                                    @"75th Percentile for Head.", @"46.0",
+                                    @"90th Percentile for Head.", @"46.8",
+                                    @"95th Percentile for Head.", @"47.3",
+                                    @"97th Percentile for Head.", @"47.6",
+                                    nil];
+    
+    
+    headChartG = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                  ghead0, [NSNumber numberWithInt:0],
+                  ghead1, [NSNumber numberWithInt:1],
+                  ghead2, [NSNumber numberWithInt:2],
+                  ghead3, [NSNumber numberWithInt:3],
+                  ghead4, [NSNumber numberWithInt:4],
+                  ghead5, [NSNumber numberWithInt:5],
+                  ghead6, [NSNumber numberWithInt:6],
+                  ghead7, [NSNumber numberWithInt:7],
+                  ghead8, [NSNumber numberWithInt:8],
+                  ghead9, [NSNumber numberWithInt:9],
+                  ghead10, [NSNumber numberWithInt:10],
+                  ghead11, [NSNumber numberWithInt:11],
+                  ghead12, [NSNumber numberWithInt:12],
+                  nil];
+    //Avg.
     NSMutableArray *weightG = [NSMutableArray array];
     [weightG addObject:@"3.4"];
     [weightG addObject:@"4.5"];
@@ -835,12 +1164,15 @@ static int heightModifier;
         bodyPic.image = [UIImage imageNamed:@"BodyView_boy.png"];
         weightChartUse= weightChartB;
         heightChartUse= heightChartB;
+        headChartUse= headChartB;
+        NSLog(@"ii");
     }
     else
     {
         bodyPic.image = [UIImage imageNamed:@"BodyView_girl.png"];
         weightChartUse= weightChartG;
         heightChartUse= heightChartG;
+        headChartUse= headChartG;
     }
 }
 - (void)viewDidUnload
@@ -853,6 +1185,7 @@ static int heightModifier;
     [self setWeightType:nil];
     
     //NEED TO DESTROY DICTIONARIES LATER.
+    [self setHeadLabel:nil];
     [super viewDidUnload];
 }
 
@@ -878,9 +1211,11 @@ static int heightModifier;
     
     //submitAll(ageTextFIeld, heightTextField, heightLabel, weightTextField, weightLabel);
    
+    //Weight
     double distance = 0;
     double weight = round(weightTextField.text.doubleValue * weightModifier * 10)/10.0 ;
     NSMutableDictionary *wTemp = [weightChartUse objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
+    
     while([wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight + distance]] == nil
           &&[wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight - distance]] == nil)
     {
@@ -896,9 +1231,10 @@ static int heightModifier;
             weightLabel.text = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight - distance]];
     }
     
+    //Height
     distance = 0;
     double height = round(heightTextField.text.doubleValue * heightModifier * 10)/10.0 ;
-    NSMutableDictionary *hTemp = [heightChartB objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
+    NSMutableDictionary *hTemp = [heightChartUse objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
     while([hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]] == nil
           &&[hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]] == nil)
     {
@@ -912,6 +1248,26 @@ static int heightModifier;
             heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]];
         else
             heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]];
+    }
+    
+    
+    //Head
+    distance = 0;
+    double head = round(headTextField.text.doubleValue * heightModifier * 10)/10.0 ;
+    NSMutableDictionary *heTemp = [headChartUse objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
+    while([heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]] == nil
+          &&[heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head - distance]] == nil)
+    {
+        distance += 0.1;
+    }
+    if(distance == 0)
+        headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head]];
+    else
+    {
+        if([heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]] != nil)
+            headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]];
+        else
+            headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head - distance]];
     }
 }
 
@@ -977,20 +1333,23 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     int index = [ageTextField.text intValue];
     if([[[Model uniqueModel]gender] isEqualToString:@"Boy"])
     {
-        double w = [[[avgValue objectForKey:@"weightB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
-        double h = [[[avgValue objectForKey:@"heightB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
-        double he = [[[avgValue objectForKey:@"headB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
-        weightAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",w,@")"];
-        heightAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",h,@")"];
-        headAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",he,@")"];
-      
+        double w = round([[[avgValue objectForKey:@"weightB"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getWeightModifier] *10)/10.0;
+        double h = round([[[avgValue objectForKey:@"heightB"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
+        double he = round([[[avgValue objectForKey:@"headB"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
+        weightAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",w,@")"];
+        heightAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",h,@")"];
+        headAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",he,@")"];
+        NSLog(@"%f",[[Model uniqueModel] getWeightModifier]);
+       //NSLog(heightAvg.text);
     }
     else
     {
-        weightAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"weightG"]objectAtIndex:index],@")"];
-        heightAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"heightG"]objectAtIndex:index],@")"];
-        headAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"heeadG"]objectAtIndex:index],@")"];
-    
+        double w = round([[[avgValue objectForKey:@"weightG"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getWeightModifier] *10)/10.0;
+        double h = round([[[avgValue objectForKey:@"heightG"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
+        double he = round([[[avgValue objectForKey:@"headG"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
+        weightAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",w,@")"];
+        heightAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",h,@")"];
+        headAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",he,@")"];
     }
 }
 @end

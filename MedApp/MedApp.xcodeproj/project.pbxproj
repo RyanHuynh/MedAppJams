@@ -42,6 +42,7 @@
 		5589D7341657B1CC009DD46B /* TorsoView_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D7091657B1CC009DD46B /* TorsoView_girl.png */; };
 		5589D7351657B1CC009DD46B /* TorsoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D70B1657B1CC009DD46B /* TorsoView.m */; };
 		5589D73B1657B33A009DD46B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5589D7391657B33A009DD46B /* MainStoryboard.storyboard */; };
+		55BD1AC91658A8D900421DE0 /* appjam_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BD1AC81658A8D900421DE0 /* appjam_icon_72x72.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		5589D70A1657B1CC009DD46B /* TorsoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorsoView.h; sourceTree = "<group>"; };
 		5589D70B1657B1CC009DD46B /* TorsoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorsoView.m; sourceTree = "<group>"; };
 		5589D73A1657B33A009DD46B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		55BD1AC61658A8C200421DE0 /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
+		55BD1AC81658A8D900421DE0 /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		5589D69F1657B158009DD46B = {
 			isa = PBXGroup;
 			children = (
+				55BD1AC81658A8D900421DE0 /* appjam_icon_72x72.png */,
 				5589D6B41657B158009DD46B /* MedApp */,
 				5589D6AD1657B158009DD46B /* Frameworks */,
 				5589D6AB1657B158009DD46B /* Products */,
@@ -167,6 +171,7 @@
 		5589D7381657B207009DD46B /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				55BD1AC61658A8C200421DE0 /* appjam_icon_72x72.png */,
 				5589D7081657B1CC009DD46B /* TorsoView_boy.png */,
 				5589D7091657B1CC009DD46B /* TorsoView_girl.png */,
 				5589D6F01657B1CC009DD46B /* LegView_boy.png */,
@@ -246,7 +251,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ryan Huynh";
 			};
-			buildConfigurationList = 5589D6A41657B158009DD46B /* Build configuration list for PBXProject "medappjam" */;
+			buildConfigurationList = 5589D6A41657B158009DD46B /* Build configuration list for PBXProject "MedApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -287,6 +292,7 @@
 				5589D7331657B1CC009DD46B /* TorsoView_boy.png in Resources */,
 				5589D7341657B1CC009DD46B /* TorsoView_girl.png in Resources */,
 				5589D73B1657B33A009DD46B /* MainStoryboard.storyboard in Resources */,
+				55BD1AC91658A8D900421DE0 /* appjam_icon_72x72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +426,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5589D6A41657B158009DD46B /* Build configuration list for PBXProject "medappjam" */ = {
+		5589D6A41657B158009DD46B /* Build configuration list for PBXProject "MedApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5589D6CC1657B158009DD46B /* Debug */,

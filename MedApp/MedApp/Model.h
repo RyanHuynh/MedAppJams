@@ -23,10 +23,10 @@
 -(void) changeGender:(NSString*) _gender;
 -(void) changeHeightSetting:(NSString*) _heightSetting;
 -(void) changeWeightSetting:(NSString*) _weightSetting;
--(void) changeWeightModifier:(int) modifier;
--(void) changeHeightModifier:(int) modifier;
--(int) getWeightModifier;
--(int) getHeightModifier;
+-(void) changeWeightModifier:(double) modifier;
+-(void) changeHeightModifier:(double) modifier;
+-(double) getWeightModifier;
+-(double) getHeightModifier;
 -(void) setLogin:(BOOL) signal;
 -(BOOL) checkRecord:(NSString*) recordName;
 -(void) createNewRecord:(NSString*) newName:(int) genderInput;

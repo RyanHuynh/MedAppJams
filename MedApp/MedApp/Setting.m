@@ -63,11 +63,14 @@
     {
         [[Model uniqueModel] changeWeightSetting:@"(Kilogram)"];
         [[Model uniqueModel] changeWeightModifier:1];
-        NSLog(@"lol");
+        
     }
     else
+    {
         [[Model uniqueModel] changeWeightSetting:@"(Pound)"];
         [[Model uniqueModel] changeWeightModifier:0.453592];
+        NSLog(@"%f", weightSetting);
+    }
 
 }
 
@@ -79,8 +82,10 @@
         
     }
     else
+    {
         [[Model uniqueModel] changeHeightSetting:@"(Inch)"];
         [[Model uniqueModel] changeHeightModifier:2.54];
+    }
 }
 -(IBAction)changeGender:(id)sender {
         
