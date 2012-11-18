@@ -1787,7 +1787,25 @@
                 <relationship kind="action" name="showAge:"/>
                 <relationship kind="outlet" name="agePicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="ageTextField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="earLL" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="earLLAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="earLR" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="earLRAvg" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="headImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="icd" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="icdAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ipd" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ipdAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mouth" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mouthAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="neck" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="neckAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ocd" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ocdAvg" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pfl" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pflAvg" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="philtrum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="philtrumAvg" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pickerViewContainer" candidateClass="UIView"/>
             </relationships>
         </class>

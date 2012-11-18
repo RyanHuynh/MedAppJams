@@ -16,6 +16,7 @@
 @synthesize list;
 @synthesize name;
 @synthesize gender;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -68,14 +69,12 @@ titleForHeaderInSection:(NSInteger)section {
 }
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[Model uniqueModel] selectRecord:[list objectAtIndex:[indexPath row]]];
-    [[Model uniqueModel] setLogIn:YES];
+    [[Model uniqueModel] setLogin:[list objectAtIndex:[indexPath row]]];
     [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
 }
 - (IBAction)createRecord:(id)sender {
     int genderID = gender.selectedSegmentIndex;
     [[Model uniqueModel]createNewRecord:name.text :genderID];
-    [[Model uniqueModel] selectRecord:name.text];
-    [[Model uniqueModel] setLogIn:YES];
-   }
+    [[Model uniqueModel] setLogin:[[Model uniqueModel] loginID]];
+}
 @end
