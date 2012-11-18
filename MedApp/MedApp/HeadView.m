@@ -25,8 +25,10 @@
 @synthesize earLRAvg;
 @synthesize earLL;
 @synthesize earLLAvg;
-@synthesize pfl;
-@synthesize pflAvg;
+@synthesize pflL;
+@synthesize pflLAvg;
+@synthesize pflR;
+@synthesize pflRAvg;
 @synthesize neck;
 @synthesize neckAvg;
 @synthesize mouth;
@@ -68,7 +70,6 @@
 - (void)viewDidUnload {
     [self setIcd:nil];
     [self setEarLR:nil];
-    [self setPfl:nil];
     [self setNeck:nil];
     [self setMouth:nil];
     [self setPhiltrum:nil];
@@ -109,7 +110,8 @@
     pickerViewContainer.hidden = NO;}
 - (IBAction)pickerDone:(id)sender {
     pickerViewContainer.hidden = YES;
-    [self getAvgValue];}
+    //[self getAvgValue];
+}
 
 
 //DISPLAY AVG.
@@ -118,8 +120,7 @@
     int index = [ageTextField.text intValue];
    
         double _icd = round([[[avgValue objectForKey:@"icd"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getWeightModifier] *10)/10.0;
-        double _earLR = round([[[avgValue objectForKey:@"earLR"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
-        double _earLL = round([[[avgValue objectForKey:@"earLL"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
+        double _ear = round([[[avgValue objectForKey:@"ear"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
         double _pfl = round([[[avgValue objectForKey:@"pfl"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getWeightModifier] *10)/10.0;
         double _neck = round([[[avgValue objectForKey:@"neck"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
         double _mouth = round([[[avgValue objectForKey:@"mouth"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
@@ -127,9 +128,10 @@
         double _ipd = round([[[avgValue objectForKey:@"ipd"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
         double _ocd = round([[[avgValue objectForKey:@"ocd"]objectAtIndex:index] doubleValue] / [[Model uniqueModel] getHeightModifier]*10)/10.0;
         icdAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_icd,@")"];
-        earLRAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_earLR,@")"];
-        earLLAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_earLL,@")"];
-        pflAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_pfl,@")"];
+        earLRAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_ear,@")"];
+        earLLAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_ear,@")"];
+        pflLAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_pfl,@")"];
+        pflRAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_pfl,@")"];
         neckAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_neck,@")"];
         mouthAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_mouth,@")"];
         philtrumAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_philtrum,@")"];
@@ -137,13 +139,13 @@
         ocdAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_ocd,@")"];
 }
 
-//UPDATE
+//UPDATE PFLR MISSING
 - (IBAction)updateRecord:(id)sender {
     if(![[Model uniqueModel] logIn])
         [self doAlert];
     else
     {
-        [[Model uniqueModel] headViewUpdate: icd.text: icdAvg.text : earLR.text: earLRAvg.text :earLL.text  :earLLAvg.text: pfl.text: pflAvg.text : neck.text: neckAvg.text :mouth.text  :mouthAvg.text: philtrum.text: philtrumAvg.text :ipd.text  :ipdAvg.text: ocd.text  :ocdAvg.text: [ageTextField.text intValue]];
+        [[Model uniqueModel] headViewUpdate: icd.text: icdAvg.text : earLR.text: earLRAvg.text :earLL.text  :earLLAvg.text: pflL.text: pflLAvg.text : neck.text: neckAvg.text :mouth.text  :mouthAvg.text: philtrum.text: philtrumAvg.text :ipd.text  :ipdAvg.text: ocd.text  :ocdAvg.text: [ageTextField.text intValue]];
         [self showComfirmation];
     }
     

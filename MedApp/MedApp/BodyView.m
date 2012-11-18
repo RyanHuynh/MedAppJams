@@ -1200,7 +1200,7 @@ static int heightModifier;
        [self doAlert];
     else
     {
-        [[Model uniqueModel] bodyViewUpdate: heightTextField.text: weightTextField.text : headTextField.text:weightLabel.text :heightLabel.text  :headLabel.text:[ageTextField.text intValue]];
+        [[Model uniqueModel] bodyViewUpdate: heightTextField.text: weightTextField.text : headTextField.text:weightLabel.text :heightLabel.text  :headLabel.text:weightAvg.text :heightAvg.text  :headAvg.text:[ageTextField.text intValue]];
         [self showComfirmation];
     }
     
@@ -1211,7 +1211,10 @@ static int heightModifier;
 - (IBAction)submitButton:(id)sender {
     
     //submitAll(ageTextFIeld, heightTextField, heightLabel, weightTextField, weightLabel);
-   
+    NSString *w;
+     NSString *h;
+     NSString *he;
+    
     //Weight
     double distance = 0;
     double weight = round(weightTextField.text.doubleValue * weightModifier * 10)/10.0 ;
@@ -1223,15 +1226,15 @@ static int heightModifier;
        distance += 0.1;
     }
     if(distance == 0)
-        weightLabel.text = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight]];
+        w = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight]];
     else
     {
         if([wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight + distance]] != nil)
-            weightLabel.text = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight + distance]];
+           w = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight + distance]];
         else
-            weightLabel.text = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight - distance]];
+            w = [wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight - distance]];
     }
-    
+    weightLabel.text = w;
     //Height
     distance = 0;
     double height = round(heightTextField.text.doubleValue * heightModifier * 10)/10.0 ;
@@ -1242,15 +1245,15 @@ static int heightModifier;
         distance += 0.1;
     }
     if(distance == 0)
-        heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height]];
+       h = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height]];
     else
     {
         if([hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]] != nil)
-            heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]];
+            h = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]];
         else
-            heightLabel.text = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]];
+            h = [hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]];
     }
-    
+      heightLabel.text = h;
     
     //Head
     distance = 0;
@@ -1262,14 +1265,15 @@ static int heightModifier;
         distance += 0.1;
     }
     if(distance == 0)
-        headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head]];
+        he = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head]];
     else
     {
         if([heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]] != nil)
-            headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]];
+            he = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head + distance]];
         else
-            headLabel.text = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head - distance]];
+            he = [heTemp objectForKey:[NSString stringWithFormat:@"%.1f", head - distance]];
     }
+    headLabel.text = he;
 }
 
 
@@ -1297,7 +1301,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 {
     UIAlertView *alertDialog;
 	alertDialog = [[UIAlertView alloc]
-                   initWithTitle: @"Record has ben saved."
+                   initWithTitle: @"Record has been saved."
                    message:nil
                    delegate: self
                    cancelButtonTitle: @"OK"

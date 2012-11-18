@@ -103,7 +103,8 @@ static int uniqueId;
 }
 -(void) createNewRecord:(NSString*) newName: (int)genderInput
 {
-    NSString *genderS;
+    NSString *genderS, *idU;
+    idU = [NSString stringWithFormat:@"%d", uniqueId];
     if (genderInput == 0) {
         genderS = @"Boy";
     }
@@ -115,36 +116,43 @@ static int uniqueId;
         NSMutableDictionary *monthRecord = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
                                             newName,@"name",
                                             genderS,@"gender",
-                                            @"",@"weight",
-                                            @"",@"height",
-                                            @"",@"weightP",
-                                            @"",@"heightP",
-                                            @"",@"headP",
-                                            @"",@"head",
-                                            @"",@"icd",
-                                            @"",@"icdAvg",
-                                            @"",@"earLR",
-                                            @"",@"earLRAvg",
-                                            @"",@"earLL",
-                                            @"",@"earLLAvg",
-                                            @"",@"pfl",
-                                            @"",@"pflAvg",
-                                            @"",@"neck",
-                                            @"",@"neckAvg",
-                                            @"",@"mouth",
-                                            @"",@"mouthAvg",
-                                            @"",@"philtrum",
-                                            @"",@"philtrumAvg",
-                                            @"",@"ipd",
-                                            @"",@"ipdAvg",
-                                            @"",@"ocd",
-                                            @"",@"ocdAvg",
+                                            idU,@"id",
+                                            @" ",@"weight",
+                                            @" ",@"height",
+                                            @" ",@"weightP",
+                                            @" ",@"heightP",
+                                            @" ",@"headP",
+                                            @" ",@"head",
+                                            @" ",@"icd",
+                                            @" ",@"icdAvg",
+                                            @" ",@"earLR",
+                                            @" ",@"earLRAvg",
+                                            @" ",@"earLL",
+                                            @" ",@"earLLAvg",
+                                            @" ",@"pflL",
+                                            @" ",@"pflLAvg",
+                                            @" ",@"pflR",
+                                            @" ",@"pflRAvg",
+                                            @" ",@"neck",
+                                            @" ",@"neckAvg",
+                                            @" ",@"mouth",
+                                            @" ",@"mouthAvg",
+                                            @" ",@"philtrum",
+                                            @" ",@"philtrumAvg",
+                                            @" ",@"ipd",
+                                            @" ",@"ipdAvg",
+                                            @" ",@"ocd",
+                                            @" ",@"ocdAvg",
+                                            @" ",@"weightA",
+                                            @" ",@"heightA",
+                                            @" ",@"headA",
                                             nil];
 
         [newRecord addObject:monthRecord];
     }
     [log setObject:newRecord forKey:[NSString stringWithFormat:@"%d", uniqueId]];
     uniqueId++;
+   
 }
 
 -(void) selectRecord:(NSString *)recordID
@@ -169,7 +177,7 @@ static int uniqueId;
     return temp;
 }
 
--(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) head: (NSString*) heightP: (NSString*) weightP: (NSString*) headP:(int) month{
+-(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) head: (NSString*) heightP: (NSString*) weightP: (NSString*) headP: (NSString*) heightA: (NSString*) weightA: (NSString*) headA: (int) month{
     
     if([weightSetting isEqualToString:@"Pound"]){
         double weightN = [weight doubleValue] * 0.453592;
@@ -187,6 +195,9 @@ static int uniqueId;
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:weightP forKey:@"heightP"];
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:head forKey:@"head" ];
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:headP forKey:@"headP"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:heightA forKey:@"heightA"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:headA forKey:@"headA" ];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:weightA forKey:@"weightA"];
 
    
 }
@@ -202,6 +213,7 @@ static int uniqueId;
         
             double icdN = [icd doubleValue] * 2.54;
             icd = [NSString stringWithFormat:@"%f", icdN];
+            
             double icdAvgN = [icdAvg doubleValue] * 2.54;
             icdAvg = [NSString stringWithFormat:@"%f", icdAvgN];
             double earLRN = [earLR doubleValue] * 2.54;

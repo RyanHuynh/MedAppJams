@@ -16,10 +16,19 @@
 @synthesize nameLabel;
 @synthesize weightLabel;
 @synthesize heightLabel;
+@synthesize weightPLabel;
+@synthesize heightPLabel;
 @synthesize monthLabel;
 @synthesize prevButton;
 @synthesize nextButton;
 
+@synthesize headA;
+@synthesize heightA;
+@synthesize weightA;
+@synthesize headLabel;
+@synthesize headPLabel;
+@synthesize idLabel;
+@synthesize gender;
 static int selectedMonth;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,6 +65,17 @@ static int selectedMonth;
     NSMutableDictionary *temp = [[Model uniqueModel] getRecordForMonth:selectedMonth];
     weightLabel.text = [temp objectForKey:@"weight"];
     heightLabel.text = [temp objectForKey:@"height"];
+    weightPLabel.text = [temp objectForKey:@"weightP"];
+    NSLog(weightPLabel.text);
+    heightPLabel.text = [temp objectForKey:@"heightP"];
+    headLabel.text = [temp objectForKey:@"head"];
+    headPLabel.text = [temp objectForKey:@"headP"];
+    heightPLabel.text = [temp objectForKey:@"heightP"];
+    headA.text = [temp objectForKey:@"headA"];
+    heightA.text = [temp objectForKey:@"heightA"];
+    weightA.text = [temp objectForKey:@"weightA"];
+    gender.text = [temp objectForKey:@"gender"];
+    idLabel.text = [temp objectForKey:@"id"];
 }
 
 - (IBAction)prevMonth:(id)sender {
@@ -80,5 +100,15 @@ static int selectedMonth;
         [nextButton setEnabled:NO];
     else
         [nextButton setEnabled:YES];
+}
+- (void)viewDidUnload {
+    
+    [self setWeightA:nil];
+    [self setHeightA:nil];
+    [self setHeadLabel:nil];
+    [self setHeadPLabel:nil];
+    [self setHeadA:nil];
+    [self setIdLabel:nil];
+    [super viewDidUnload];
 }
 @end

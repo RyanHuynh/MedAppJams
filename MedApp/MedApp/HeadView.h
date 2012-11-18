@@ -29,8 +29,10 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *earLRAvg;
 @property (strong, nonatomic) IBOutlet UITextField *earLL;
 @property (strong, nonatomic) IBOutlet UILabel *earLLAvg;
-@property (strong, nonatomic) IBOutlet UITextField *pfl;
-@property (strong, nonatomic) IBOutlet UILabel *pflAvg;
+@property (strong, nonatomic) IBOutlet UITextField *pflR;
+@property (strong, nonatomic) IBOutlet UILabel *pflRAvg;
+@property (strong, nonatomic) IBOutlet UITextField *pflL;
+@property (strong, nonatomic) IBOutlet UILabel *pflLAvg;
 @property (strong, nonatomic) IBOutlet UITextField *neck;
 @property (strong, nonatomic) IBOutlet UILabel *neckAvg;
 @property (strong, nonatomic) IBOutlet UITextField *mouth;
@@ -40,7 +42,7 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *ipd;
 @property (strong, nonatomic) IBOutlet UILabel *ipdAvg;
 @property (strong, nonatomic) IBOutlet UITextField *ocd;
-@property (strong, nonatomic) IBOutlet UITextField *ocdAvg;
+@property (strong, nonatomic) IBOutlet UILabel *ocdAvg;
 
 @property (strong, nonatomic) NSMutableDictionary *avgValue;
 //- (IBAction)tap:(id)sender;
