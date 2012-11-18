@@ -977,11 +977,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     int index = [ageTextField.text intValue];
     if([[[Model uniqueModel]gender] isEqualToString:@"Boy"])
     {
-        weightAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"weightB"]objectAtIndex:index],@")"];
-        heightAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"weightB"]objectAtIndex:index],@")"];
-        headAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"headB"]objectAtIndex:index],@")"];
-        NSLog([[avgValue objectForKey:@"heightB"]objectAtIndex:1]);
-
+        double w = [[[avgValue objectForKey:@"weightB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
+        double h = [[[avgValue objectForKey:@"heightB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
+        double he = [[[avgValue objectForKey:@"headB"]objectAtIndex:index] doubleValue] * [[Model uniqueModel] getWeightModifier];
+        weightAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",w,@")"];
+        heightAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",h,@")"];
+        headAvg.text = [NSString stringWithFormat:@"%@%f%@",@"(avg. ",he,@")"];
+      
     }
     else
     {
