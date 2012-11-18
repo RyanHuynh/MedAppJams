@@ -40,6 +40,8 @@
 
 @synthesize avgValue;
 
+
+//INITIALIZE
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -61,8 +63,17 @@
     avgValue = [[NSMutableDictionary alloc]initWithObjectsAndKeys:headG,@"headB",nil];
 
 }
-
-
+- (void)viewDidUnload {
+    [self setIcd:nil];
+    [self setEarLR:nil];
+    [self setPfl:nil];
+    [self setNeck:nil];
+    [self setMouth:nil];
+    [self setPhiltrum:nil];
+    [self setIpd:nil];
+    [self setOcd:nil];
+    [super viewDidUnload];
+}
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
      if([[[Model uniqueModel] gender] isEqualToString:@"Boy"])
@@ -75,6 +86,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//PICKER SECTION
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     ageTextField.text = [ageData objectAtIndex:[pickerView selectedRowInComponent:0]];
 }
@@ -94,6 +108,9 @@
 - (IBAction)pickerDone:(id)sender {
     pickerViewContainer.hidden = YES;
     [self getAvgValue];}
+
+
+//DISPLAY AVG.
 -(void) getAvgValue
 {
     int index = [ageTextField.text intValue];
@@ -118,15 +135,51 @@
         ocdAvg.text = [NSString stringWithFormat:@"%@%.1f%@",@"(avg. ",_ocd,@")"];
 }
 
-- (void)viewDidUnload {
-    [self setIcd:nil];
-    [self setEarLR:nil];
-    [self setPfl:nil];
-    [self setNeck:nil];
-    [self setMouth:nil];
-    [self setPhiltrum:nil];
-    [self setIpd:nil];
-    [self setOcd:nil];
-    [super viewDidUnload];
+//UPDATE
+- (IBAction)updateRecord:(id)sender {
+    if(![[Model uniqueModel] logIn])
+        [self doAlert];
+    else
+    {
+        [[Model uniqueModel] headViewUpdate: icd.text: icdAvg.text : earLR.text: earLRAvg.text :earLL.text  :earLLAvg.text: pfl.text: pflAvg.text : neck.text: neckAvg.text :mouth.text  :mouthAvg.text: philtrum.text: philtrumAvg.text :ipd.text  :ipdAvg.text: ocd.text  :ocdAvg.text: [ageTextField.text intValue]];
+        [self showComfirmation];
+    }
+    
 }
+
+//ALERT HANDLING
+-(void) showComfirmation
+{
+    UIAlertView *alertDialog;
+	alertDialog = [[UIAlertView alloc]
+                   initWithTitle: @"Record has ben saved."
+                   message:nil
+                   delegate: self
+                   cancelButtonTitle: @"OK"
+                   otherButtonTitles: nil];
+    
+    
+	[alertDialog show];
+}
+-(void)doAlert{
+    UIAlertView *alertDialog;
+	alertDialog = [[UIAlertView alloc]
+                   initWithTitle: @"No record selected"
+                   message:@"You have to login inorder to update record."
+                   delegate: self
+                   cancelButtonTitle: nil
+                   otherButtonTitles: @"Log in",@"Cancel",nil];
+    
+    
+	[alertDialog show];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+	NSString *buttonTitle=[alertView buttonTitleAtIndex:buttonIndex];
+	if ([buttonTitle isEqualToString:@"Log in"]) {
+        [self performSegueWithIdentifier:@"toLogIn" sender:nil];}
+}
+
+
 @end

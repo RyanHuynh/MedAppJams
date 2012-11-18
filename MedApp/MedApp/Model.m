@@ -121,6 +121,24 @@ static int uniqueId;
                                             @"",@"heightP",
                                             @"",@"headP",
                                             @"",@"head",
+                                            @"",@"icd",
+                                            @"",@"icdAvg",
+                                            @"",@"earLR",
+                                            @"",@"earLRAvg",
+                                            @"",@"earLL",
+                                            @"",@"earLLAvg",
+                                            @"",@"pfl",
+                                            @"",@"pflAvg",
+                                            @"",@"neck",
+                                            @"",@"neckAvg",
+                                            @"",@"mouth",
+                                            @"",@"mouthAvg",
+                                            @"",@"philtrum",
+                                            @"",@"philtrumAvg",
+                                            @"",@"ipd",
+                                            @"",@"ipdAvg",
+                                            @"",@"ocd",
+                                            @"",@"ocdAvg",
                                             nil];
 
         [newRecord addObject:monthRecord];
@@ -178,7 +196,7 @@ static int uniqueId;
     return [[[log objectForKey:selectedRecord] objectAtIndex:0] objectForKey:@"name"];
 }
 
-/*-(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLRAvg: (NSString*) earLL: (NSString*) earLLAvg:(NSString*) pfl: (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg: (int) month
+-(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLRAvg: (NSString*) earLL: (NSString*) earLLAvg:(NSString*) pfl: (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg: (int) month
 {
         if([heightSetting isEqualToString:@"Inch"]){
         
@@ -212,12 +230,21 @@ static int uniqueId;
             ocdAvg = [NSString stringWithFormat:@"%f", ocdAvgN];
         }
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:icd forKey:@"icd" ];
-    [[[log objectForKey:loginID] objectAtIndex:month] setObject:weight forKey:@"weight"];
-    [[[log objectForKey:loginID] objectAtIndex:month] setObject:heightP forKey:@"weightP"];
-    [[[log objectForKey:loginID] objectAtIndex:month] setObject:weightP forKey:@"heightP"];
-    [[[log objectForKey:loginID] objectAtIndex:month] setObject:head forKey:@"head" ];
-    [[[log objectForKey:loginID] objectAtIndex:month] setObject:headP forKey:@"headP"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:icdAvg forKey:@"icdAvg"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:earLR forKey:@"earLR"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:earLRAvg forKey:@"earLR"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:earLL forKey:@"earLL" ];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:earLLAvg forKey:@"earLLAvg"];
+    
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:pfl forKey:@"pfl" ];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:pflAvg forKey:@"pflAvg"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:philtrum forKey:@"philtrum"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:philtrumAvg forKey:@"philtrumAvg"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:ipd forKey:@"ipd" ];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:ipdAvg forKey:@"ipdAvg"];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:ocd forKey:@"ocd" ];
+    [[[log objectForKey:loginID] objectAtIndex:month] setObject:ocdAvg forKey:@"ocdAvg"];
 
-}*/
+}
 
 @end

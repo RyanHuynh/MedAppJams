@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Model.h"
-@interface HeadView : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface HeadView : UIViewController <UIAlertViewDelegate,
+UIPickerViewDataSource, UIPickerViewDelegate>
 {
     
     IBOutlet UIPickerView *agePicker;
@@ -45,5 +46,6 @@
 //- (IBAction)tap:(id)sender;
 - (IBAction)showAge:(id)sender;
 - (IBAction)pickerDone:(id)sender;
+- (IBAction)updateRecord:(id)sender;
 
 @end

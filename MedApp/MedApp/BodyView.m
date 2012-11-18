@@ -1193,6 +1193,8 @@ static int heightModifier;
 }
 
 
+
+//UPDATE
 - (IBAction)updateRecord:(id)sender {
     if(![[Model uniqueModel] logIn])
        [self doAlert];
@@ -1201,9 +1203,11 @@ static int heightModifier;
         [[Model uniqueModel] bodyViewUpdate: heightTextField.text: weightTextField.text : headTextField.text:weightLabel.text :heightLabel.text  :headLabel.text:[ageTextField.text intValue]];
         [self showComfirmation];
     }
-    //update
+    
 }
 
+
+//SUBMIT BUTTON
 - (IBAction)submitButton:(id)sender {
     
     //submitAll(ageTextFIeld, heightTextField, heightLabel, weightTextField, weightLabel);
@@ -1268,6 +1272,8 @@ static int heightModifier;
     }
 }
 
+
+//ALERT
 -(void)doAlert{
     UIAlertView *alertDialog;
 	alertDialog = [[UIAlertView alloc]
@@ -1305,6 +1311,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     return [textField resignFirstResponder];
 }
 
+//PICKER SECTION
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     ageTextField.text = [ageData objectAtIndex:[pickerView selectedRowInComponent:0]];
 }
@@ -1325,6 +1332,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     pickerViewContainer.hidden = YES;
     [self getAvgValue];}
 
+
+//AVG.
 -(void) getAvgValue
 {
     int index = [ageTextField.text intValue];
