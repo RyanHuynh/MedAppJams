@@ -45,14 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5589D6AA1657B158009DD46B /* MedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5589D6AA1657B158009DD46B /* medappjam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medappjam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5589D6AE1657B158009DD46B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5589D6B01657B158009DD46B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5589D6B21657B158009DD46B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5589D6B61657B158009DD46B /* MedApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedApp-Info.plist"; sourceTree = "<group>"; };
+		5589D6B61657B158009DD46B /* medappjam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "medappjam-Info.plist"; sourceTree = "<group>"; };
 		5589D6B81657B158009DD46B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5589D6BA1657B158009DD46B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5589D6BC1657B158009DD46B /* MedApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedApp-Prefix.pch"; sourceTree = "<group>"; };
+		5589D6BC1657B158009DD46B /* medappjam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "medappjam-Prefix.pch"; sourceTree = "<group>"; };
 		5589D6BD1657B158009DD46B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5589D6BE1657B158009DD46B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5589D6C01657B158009DD46B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		5589D6AB1657B158009DD46B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5589D6AA1657B158009DD46B /* MedApp.app */,
+				5589D6AA1657B158009DD46B /* medappjam.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 		5589D6B51657B158009DD46B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5589D6B61657B158009DD46B /* MedApp-Info.plist */,
+				5589D6B61657B158009DD46B /* medappjam-Info.plist */,
 				5589D6B71657B158009DD46B /* InfoPlist.strings */,
 				5589D6BA1657B158009DD46B /* main.m */,
-				5589D6BC1657B158009DD46B /* MedApp-Prefix.pch */,
+				5589D6BC1657B158009DD46B /* medappjam-Prefix.pch */,
 				5589D6C01657B158009DD46B /* Default.png */,
 				5589D6C21657B158009DD46B /* Default@2x.png */,
 				5589D6C41657B158009DD46B /* Default-568h@2x.png */,
@@ -220,9 +220,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5589D6A91657B158009DD46B /* MedApp */ = {
+		5589D6A91657B158009DD46B /* medappjam */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5589D6CE1657B158009DD46B /* Build configuration list for PBXNativeTarget "MedApp" */;
+			buildConfigurationList = 5589D6CE1657B158009DD46B /* Build configuration list for PBXNativeTarget "medappjam" */;
 			buildPhases = (
 				5589D6A61657B158009DD46B /* Sources */,
 				5589D6A71657B158009DD46B /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = MedApp;
+			name = medappjam;
 			productName = MedApp;
-			productReference = 5589D6AA1657B158009DD46B /* MedApp.app */;
+			productReference = 5589D6AA1657B158009DD46B /* medappjam.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ryan Huynh";
 			};
-			buildConfigurationList = 5589D6A41657B158009DD46B /* Build configuration list for PBXProject "MedApp" */;
+			buildConfigurationList = 5589D6A41657B158009DD46B /* Build configuration list for PBXProject "medappjam" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,7 +258,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5589D6A91657B158009DD46B /* MedApp */,
+				5589D6A91657B158009DD46B /* medappjam */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +344,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eiling Fernandez (2B3H3N3F88)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eiling Fernandez (2B3H3N3F88)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -357,8 +358,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "B68EFE60-2FB4-453E-913C-FE21E4F85797";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B68EFE60-2FB4-453E-913C-FE21E4F85797";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -373,14 +376,17 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eiling Fernandez (2B3H3N3F88)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eiling Fernandez (2B3H3N3F88)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "B68EFE60-2FB4-453E-913C-FE21E4F85797";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B68EFE60-2FB4-453E-913C-FE21E4F85797";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -391,9 +397,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MedApp/MedApp-Prefix.pch";
-				INFOPLIST_FILE = "MedApp/MedApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "MedApp/medappjam-Prefix.pch";
+				INFOPLIST_FILE = "MedApp/medappjam-Info.plist";
+				PRODUCT_NAME = medappjam;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,9 +408,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MedApp/MedApp-Prefix.pch";
-				INFOPLIST_FILE = "MedApp/MedApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "MedApp/medappjam-Prefix.pch";
+				INFOPLIST_FILE = "MedApp/medappjam-Info.plist";
+				PRODUCT_NAME = medappjam;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -412,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5589D6A41657B158009DD46B /* Build configuration list for PBXProject "MedApp" */ = {
+		5589D6A41657B158009DD46B /* Build configuration list for PBXProject "medappjam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5589D6CC1657B158009DD46B /* Debug */,
@@ -421,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5589D6CE1657B158009DD46B /* Build configuration list for PBXNativeTarget "MedApp" */ = {
+		5589D6CE1657B158009DD46B /* Build configuration list for PBXNativeTarget "medappjam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5589D6CF1657B158009DD46B /* Debug */,

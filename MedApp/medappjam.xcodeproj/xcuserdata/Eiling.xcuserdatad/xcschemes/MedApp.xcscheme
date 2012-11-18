@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5589D6A91657B158009DD46B"
                BuildableName = "MedApp.app"
-               BlueprintName = "MedApp"
-               ReferencedContainer = "container:MedApp.xcodeproj">
+               BlueprintName = "medappjam"
+               ReferencedContainer = "container:medappjam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
-            BlueprintName = "MedApp"
-            ReferencedContainer = "container:MedApp.xcodeproj">
+            BlueprintName = "medappjam"
+            ReferencedContainer = "container:medappjam.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
-            BlueprintName = "MedApp"
-            ReferencedContainer = "container:MedApp.xcodeproj">
+            BlueprintName = "medappjam"
+            ReferencedContainer = "container:medappjam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5589D6A91657B158009DD46B"
             BuildableName = "MedApp.app"
-            BlueprintName = "MedApp"
-            ReferencedContainer = "container:MedApp.xcodeproj">
+            BlueprintName = "medappjam"
+            ReferencedContainer = "container:medappjam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
