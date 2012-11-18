@@ -11,4 +11,13 @@
 @interface LegView : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *legImage;
 
+@property(nonatomic, retain) UIPickerView *agePicker;
+@property(nonatomic, retain) NSArray *ageData;
+@property (weak, nonatomic) IBOutlet UILabel *ageTextField;
+@property (weak, nonatomic) IBOutlet UIView *pickerViewContainer;
+
+@property (strong, nonatomic) NSMutableDictionary *avgValue;
+- (IBAction)showAge:(id)sender;
+- (IBAction)pickerDone:(id)sender;
+- (IBAction)updateRecord:(id)sender;
 @end
