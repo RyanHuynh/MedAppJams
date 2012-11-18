@@ -178,7 +178,7 @@ static int uniqueId;
     return [[[log objectForKey:selectedRecord] objectAtIndex:0] objectForKey:@"name"];
 }
 
--(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLRAvg: (NSString*) earLL: (NSString*) earLLAvg:(NSString*) pfl: (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg: (int) month
+/*-(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLRAvg: (NSString*) earLL: (NSString*) earLLAvg:(NSString*) pfl: (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg: (int) month
 {
         if([heightSetting isEqualToString:@"Inch"]){
         
@@ -218,6 +218,6 @@ static int uniqueId;
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:head forKey:@"head" ];
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:headP forKey:@"headP"];
 
-}
+}*/
 
 @end
