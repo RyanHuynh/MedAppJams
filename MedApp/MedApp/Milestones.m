@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     
-    ageData = [[NSArray alloc] initWithObjects: @"0", @"1",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
+    ageData = [[NSArray alloc] initWithObjects: @"0", @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
     pickerViewContainer.hidden = YES;
     
     //pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);

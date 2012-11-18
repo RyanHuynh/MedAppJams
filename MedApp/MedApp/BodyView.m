@@ -16,7 +16,7 @@
 @implementation BodyView
 
 @synthesize heightTextField;
-@synthesize ageTextFIeld;
+
 @synthesize weightTextField;
 @synthesize heightLabel;
 @synthesize weightLabel;
@@ -32,17 +32,27 @@
 @synthesize ageData;
 @synthesize heightType;
 @synthesize weightType;
+@synthesize agePicker;
+
+@synthesize ageTextField;
+@synthesize pickerViewContainer;
+@synthesize avgValue;
+@synthesize weightAvg;
+@synthesize heightAvg;
+@synthesize headAvg;
+
 
 static int weightModifier;
 static int heightModifier;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a n
     
-        
-    //if(setting.weightSetting.selectedSegmentIndex == 0)
-      //  weightType.text = setting.stringForWeightUse;
+    ageData = [[NSArray alloc] initWithObjects: @"0", @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
+    pickerViewContainer.hidden = YES;
+
     
     //Initialize dictionary
     //Boy Weight chart, variable name is corespoding to age, e.g. bw0 is for boy with age 0, bw1 for boy with age 1, etc..
@@ -710,6 +720,103 @@ static int heightModifier;
                     gh11, [NSNumber numberWithInt:11],
                     gh12, [NSNumber numberWithInt:12],
                     nil];
+    NSMutableArray *weightG = [NSMutableArray array];
+    [weightG addObject:@"3.4"];
+    [weightG addObject:@"4.5"];
+    [weightG addObject:@"5.2"];
+    [weightG addObject:@"5.8"];
+    [weightG addObject:@"6.4"];
+    [weightG addObject:@"6.9"];
+    [weightG addObject:@"7.4"];
+    [weightG addObject:@"7.9"];
+    [weightG addObject:@"8.3"];
+    [weightG addObject:@"8.6"];
+    [weightG addObject:@"9.0"];
+    [weightG addObject:@"9.3"];
+    [weightG addObject:@"9.6"];
+    
+    NSMutableArray *weightB = [NSMutableArray array];
+    [weightB addObject:@"3.5"];
+    [weightB addObject:@"4.8"];
+    [weightB addObject:@"5.6"];
+    [weightB addObject:@"6.3"];
+    [weightB addObject:@"7.0"];
+    [weightB addObject:@"7.6"];
+    [weightB addObject:@"8.1"];
+    [weightB addObject:@"8.6"];
+    [weightB addObject:@"9.0"];
+    [weightB addObject:@"9.4"];
+    [weightB addObject:@"9.8"];
+    [weightB addObject:@"10.1"];
+    [weightB addObject:@"10.4"];
+    
+    NSMutableArray *heightB = [NSMutableArray array];
+    [heightB addObject:@"49.9"];
+    [heightB addObject:@"56.6"];
+    [heightB addObject:@"59.6"];
+    [heightB addObject:@"62.0"];
+    [heightB addObject:@"64.2"];
+    [heightB addObject:@"66.1"];
+    [heightB addObject:@"67.8"];
+    [heightB addObject:@"69.4"];
+    [heightB addObject:@"70.9"];
+    [heightB addObject:@"72.3"];
+    [heightB addObject:@"73.6"];
+    [heightB addObject:@"74.9"];
+    [heightB addObject:@"76.1"];
+    
+    NSMutableArray *heightG = [NSMutableArray array];
+    [heightG addObject:@"49.2"];
+    [heightG addObject:@"55.2"];
+    [heightG addObject:@"58.0"];
+    [heightG addObject:@"60.4"];
+    [heightG addObject:@"62.5"];
+    [heightG addObject:@"64.4"];
+    [heightG addObject:@"66.1"];
+    [heightG addObject:@"67.7"];
+    [heightG addObject:@"69.1"];
+    [heightG addObject:@"70.5"];
+    [heightG addObject:@"71.9"];
+    [heightG addObject:@"73.1"];
+    [heightG addObject:@"74.3"];
+    
+    
+    NSMutableArray *headB = [NSMutableArray array];
+    [headB addObject:@"35.8"];
+    [headB addObject:@"39.2"];
+    [headB addObject:@"40.6"];
+    [headB addObject:@"41.7"];
+    [headB addObject:@"42.6"];
+    [headB addObject:@"43.4"];
+    [headB addObject:@"44.0"];
+    [headB addObject:@"44.5"];
+    [headB addObject:@"45.0"];
+    [headB addObject:@"45.4"];
+    [headB addObject:@"45.8"];
+    [headB addObject:@"46.1"];
+    [headB addObject:@"46.4"];
+    
+    NSMutableArray *headG = [NSMutableArray array];
+    [headG addObject:@"34.7"];
+    [headG addObject:@"37.9"];
+    [headG addObject:@"39.3"];
+    [headG addObject:@"40.4"];
+    [headG addObject:@"41.3"];
+    [headG addObject:@"42.0"];
+    [headG addObject:@"42.7"];
+    [headG addObject:@"43.2"];
+    [headG addObject:@"43.7"];
+    [headG addObject:@"44.1"];
+    [headG addObject:@"44.5"];
+    [headG addObject:@"44.8"];
+    [headG addObject:@"45.1"];
+
+    avgValue = [[NSMutableDictionary alloc]initWithObjectsAndKeys:headB,@"headB",
+                                                                 headG, @"headG",
+                                                                weightB, @"weightB",
+                                                                weightG, @"weightG",
+                                                                heightB, @"heightB",
+                                                                heightG, @"heightG",nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -719,6 +826,7 @@ static int heightModifier;
     heightType.text = [[Model uniqueModel] heightSetting];
     weightModifier = [[Model uniqueModel] getWeightModifier];
     heightModifier = [[Model uniqueModel] getHeightModifier];
+    [self getAvgValue];
 }
 -(void) checkGender
 {
@@ -740,7 +848,7 @@ static int heightModifier;
     [self setHeightLabel:nil];
     [self setWeightLabel:nil];
     [self setHeightTextField:nil];
-    [self setAgeTextFIeld:nil];
+    
     [self setWeightTextField:nil];
     [self setWeightType:nil];
     
@@ -772,7 +880,7 @@ static int heightModifier;
    
     double distance = 0;
     double weight = round(weightTextField.text.doubleValue * weightModifier * 10)/10.0 ;
-    NSMutableDictionary *wTemp = [weightChartUse objectForKey:[NSNumber numberWithInt:ageTextFIeld.text.intValue]];
+    NSMutableDictionary *wTemp = [weightChartUse objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
     while([wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight + distance]] == nil
           &&[wTemp objectForKey:[NSString stringWithFormat:@"%.1f", weight - distance]] == nil)
     {
@@ -790,7 +898,7 @@ static int heightModifier;
     
     distance = 0;
     double height = round(heightTextField.text.doubleValue * heightModifier * 10)/10.0 ;
-    NSMutableDictionary *hTemp = [heightChartB objectForKey:[NSNumber numberWithInt:ageTextFIeld.text.intValue]];
+    NSMutableDictionary *hTemp = [heightChartB objectForKey:[NSNumber numberWithInt:ageTextField.text.intValue]];
     while([hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height + distance]] == nil
           &&[hTemp objectForKey:[NSString stringWithFormat:@"%.1f", height - distance]] == nil)
     {
@@ -842,5 +950,45 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     return [textField resignFirstResponder];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    ageTextField.text = [ageData objectAtIndex:[pickerView selectedRowInComponent:0]];
+}
+-(NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return [ageData count];
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [ageData objectAtIndex:row];
+}
+- (IBAction)showAge:(id)sender {
+    pickerViewContainer.hidden = NO;}
+- (IBAction)pickerDone:(id)sender {
+    pickerViewContainer.hidden = YES;
+    [self getAvgValue];}
+
+-(void) getAvgValue
+{
+    int index = [ageTextField.text intValue];
+    if([[[Model uniqueModel]gender] isEqualToString:@"Boy"])
+    {
+        weightAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"weightB"]objectAtIndex:index],@")"];
+        heightAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"weightB"]objectAtIndex:index],@")"];
+        headAvg.text = [NSString stringWithFormat:@"%@%@%@",@"(avg. ",[[avgValue objectForKey:@"headB"]objectAtIndex:index],@")"];
+        NSLog([[avgValue objectForKey:@"heightB"]objectAtIndex:1]);
+
+    }
+    else
+    {
+        weightAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"weightG"]objectAtIndex:index],@")"];
+        heightAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"heightG"]objectAtIndex:index],@")"];
+        headAvg.text = [NSString stringWithFormat:@"%@%@",[[avgValue objectForKey:@"heeadG"]objectAtIndex:index],@")"];
+    
+    }
 }
 @end
