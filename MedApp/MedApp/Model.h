@@ -37,8 +37,9 @@
 -(NSString*) getSelectedRecordName;
 
 -(void) bodyViewUpdate:(NSString*) height: (NSString*) weight: (NSString*) head: (NSString*) heightP: (NSString*) weightP: (NSString*) headP: (NSString*) heightA: (NSString*) weightA: (NSString*) headA: (int) month;
--(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLRAvg: (NSString*) earLL: (NSString*) earLLAvg:(NSString*) pfl: (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg:(int) month;
+-(void) headViewUpdate:(NSString*) icd: (NSString*) icdAvg: (NSString*) earLR: (NSString*) earLL: (NSString*) earLRAvg: (NSString*) pflR:(NSString*) pflL : (NSString*) pflAvg: (NSString*) neck: (NSString*) neackAvg: (NSString*) mouth: (NSString*) mouthAvg: (NSString*) philtrum: (NSString*)philtrumAvg: (NSString*) ipd: (NSString*) ipdAvg: (NSString*) ocd: (NSString*) ocdAvg: (int) month;
 
+-(void) torsoViewUpdate:(NSString*) armR:(NSString*) armL:(NSString*) armAvg:(NSString*) upArmR:(NSString*) upArmL:(NSString*) upArmAvg:(NSString*) handR:(NSString*) handL:(NSString*) handAvg:(NSString*) fArmR:(NSString*) fArmL:(NSString*) fArmAvg:(NSString*) palmR:(NSString*) palmL:(NSString*) palmAvg:(NSString*) fingerR:(NSString*) fingerL:(NSString*) fingerAvg:(NSString*) ind:(NSString*) indAvg:(NSString*) chest:(NSString*) chestAvg:(NSString*) armSpan:(NSString*) armSpanAvg:(int) month;
 
 @end
 

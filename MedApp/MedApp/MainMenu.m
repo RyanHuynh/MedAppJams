@@ -15,6 +15,7 @@
 @implementation MainMenu
 @synthesize loginButton;
 @synthesize logoutButton;
+@synthesize bar;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -54,6 +55,7 @@
     {
         [logoutButton setEnabled:YES];
         [loginButton setEnabled:NO];
+        bar.topItem.title = [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"];
     }
     else{
         [loginButton setEnabled:YES];
@@ -71,5 +73,9 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 - (IBAction)logOut:(id)sender {
     [self doAlert];
+}
+- (void)viewDidUnload {
+    [self setBar:nil];
+    [super viewDidUnload];
 }
 @end

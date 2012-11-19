@@ -15,13 +15,6 @@
 		5589D6BF1657B158009DD46B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6BE1657B158009DD46B /* AppDelegate.m */; };
 		5589D6C11657B158009DD46B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C01657B158009DD46B /* Default.png */; };
 		5589D6C51657B158009DD46B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6C41657B158009DD46B /* Default-568h@2x.png */; };
-		5589D7141657B1CC009DD46B /* appjam_milestone1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6D91657B1CC009DD46B /* appjam_milestone1.png */; };
-		5589D7151657B1CC009DD46B /* appjam_milestone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */; };
-		5589D7161657B1CC009DD46B /* appjam_milestone3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */; };
-		5589D7171657B1CC009DD46B /* appjam_milestone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DC1657B1CC009DD46B /* appjam_milestone4.png */; };
-		5589D7181657B1CC009DD46B /* appjam_milestone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DD1657B1CC009DD46B /* appjam_milestone5.png */; };
-		5589D7191657B1CC009DD46B /* appjam_milestone6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DE1657B1CC009DD46B /* appjam_milestone6.png */; };
-		5589D71A1657B1CC009DD46B /* appjam_milestone7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6DF1657B1CC009DD46B /* appjam_milestone7.png */; };
 		5589D71C1657B1CC009DD46B /* BodyView_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6E11657B1CC009DD46B /* BodyView_boy.png */; };
 		5589D71D1657B1CC009DD46B /* BodyView_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D6E21657B1CC009DD46B /* BodyView_girl.png */; };
 		5589D71E1657B1CC009DD46B /* BodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D6E41657B1CC009DD46B /* BodyView.m */; };
@@ -42,6 +35,18 @@
 		5589D7341657B1CC009DD46B /* TorsoView_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5589D7091657B1CC009DD46B /* TorsoView_girl.png */; };
 		5589D7351657B1CC009DD46B /* TorsoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5589D70B1657B1CC009DD46B /* TorsoView.m */; };
 		55BD1AC91658A8D900421DE0 /* appjam_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BD1AC81658A8D900421DE0 /* appjam_icon_72x72.png */; };
+		55C1BE061659A85300701F4D /* appjam_milestone1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFA1659A85300701F4D /* appjam_milestone1.png */; };
+		55C1BE071659A85300701F4D /* appjam_milestone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFB1659A85300701F4D /* appjam_milestone2.png */; };
+		55C1BE081659A85300701F4D /* appjam_milestone3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFC1659A85300701F4D /* appjam_milestone3.png */; };
+		55C1BE091659A85300701F4D /* appjam_milestone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFD1659A85300701F4D /* appjam_milestone4.png */; };
+		55C1BE0A1659A85300701F4D /* appjam_milestone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFE1659A85300701F4D /* appjam_milestone5.png */; };
+		55C1BE0B1659A85300701F4D /* appjam_milestone6.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BDFF1659A85300701F4D /* appjam_milestone6.png */; };
+		55C1BE0C1659A85300701F4D /* appjam_milestone7.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE001659A85300701F4D /* appjam_milestone7.png */; };
+		55C1BE0D1659A85300701F4D /* appjam_milestone8.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE011659A85300701F4D /* appjam_milestone8.png */; };
+		55C1BE0E1659A85300701F4D /* appjam_milestone9.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE021659A85300701F4D /* appjam_milestone9.png */; };
+		55C1BE0F1659A85300701F4D /* appjam_milestone10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE031659A85300701F4D /* appjam_milestone10.png */; };
+		55C1BE101659A85300701F4D /* appjam_milestone11.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE041659A85300701F4D /* appjam_milestone11.png */; };
+		55C1BE111659A85300701F4D /* appjam_milestone12.png in Resources */ = {isa = PBXBuildFile; fileRef = 55C1BE051659A85300701F4D /* appjam_milestone12.png */; };
 		55D548DA165985CC00F6BDA2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D548D8165985CC00F6BDA2 /* MainStoryboard.storyboard */; };
 		55D548DE1659932800F6BDA2 /* appjam_mainmenu_button(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 55D548DB1659932800F6BDA2 /* appjam_mainmenu_button(1).png */; };
 		55D548DF1659932800F6BDA2 /* appjam_mainmenu(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 55D548DC1659932800F6BDA2 /* appjam_mainmenu(1).png */; };
@@ -62,13 +67,6 @@
 		5589D6C01657B158009DD46B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5589D6C21657B158009DD46B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5589D6C41657B158009DD46B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5589D6D91657B1CC009DD46B /* appjam_milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone1.png; sourceTree = "<group>"; };
-		5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone2.png; sourceTree = "<group>"; };
-		5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone3.png; sourceTree = "<group>"; };
-		5589D6DC1657B1CC009DD46B /* appjam_milestone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone4.png; sourceTree = "<group>"; };
-		5589D6DD1657B1CC009DD46B /* appjam_milestone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone5.png; sourceTree = "<group>"; };
-		5589D6DE1657B1CC009DD46B /* appjam_milestone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone6.png; sourceTree = "<group>"; };
-		5589D6DF1657B1CC009DD46B /* appjam_milestone7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_milestone7.png; sourceTree = "<group>"; };
 		5589D6E11657B1CC009DD46B /* BodyView_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BodyView_boy.png; sourceTree = "<group>"; };
 		5589D6E21657B1CC009DD46B /* BodyView_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BodyView_girl.png; sourceTree = "<group>"; };
 		5589D6E31657B1CC009DD46B /* BodyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyView.h; sourceTree = "<group>"; };
@@ -101,6 +99,18 @@
 		5589D70B1657B1CC009DD46B /* TorsoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorsoView.m; sourceTree = "<group>"; };
 		55BD1AC61658A8C200421DE0 /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
 		55BD1AC81658A8D900421DE0 /* appjam_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appjam_icon_72x72.png; sourceTree = "<group>"; };
+		55C1BDFA1659A85300701F4D /* appjam_milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone1.png; path = milestones/appjam_milestone1.png; sourceTree = "<group>"; };
+		55C1BDFB1659A85300701F4D /* appjam_milestone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone2.png; path = milestones/appjam_milestone2.png; sourceTree = "<group>"; };
+		55C1BDFC1659A85300701F4D /* appjam_milestone3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone3.png; path = milestones/appjam_milestone3.png; sourceTree = "<group>"; };
+		55C1BDFD1659A85300701F4D /* appjam_milestone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone4.png; path = milestones/appjam_milestone4.png; sourceTree = "<group>"; };
+		55C1BDFE1659A85300701F4D /* appjam_milestone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone5.png; path = milestones/appjam_milestone5.png; sourceTree = "<group>"; };
+		55C1BDFF1659A85300701F4D /* appjam_milestone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone6.png; path = milestones/appjam_milestone6.png; sourceTree = "<group>"; };
+		55C1BE001659A85300701F4D /* appjam_milestone7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone7.png; path = milestones/appjam_milestone7.png; sourceTree = "<group>"; };
+		55C1BE011659A85300701F4D /* appjam_milestone8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone8.png; path = milestones/appjam_milestone8.png; sourceTree = "<group>"; };
+		55C1BE021659A85300701F4D /* appjam_milestone9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone9.png; path = milestones/appjam_milestone9.png; sourceTree = "<group>"; };
+		55C1BE031659A85300701F4D /* appjam_milestone10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone10.png; path = milestones/appjam_milestone10.png; sourceTree = "<group>"; };
+		55C1BE041659A85300701F4D /* appjam_milestone11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone11.png; path = milestones/appjam_milestone11.png; sourceTree = "<group>"; };
+		55C1BE051659A85300701F4D /* appjam_milestone12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appjam_milestone12.png; path = milestones/appjam_milestone12.png; sourceTree = "<group>"; };
 		55D548D9165985CC00F6BDA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		55D548DB1659932800F6BDA2 /* appjam_mainmenu_button(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appjam_mainmenu_button(1).png"; sourceTree = "<group>"; };
 		55D548DC1659932800F6BDA2 /* appjam_mainmenu(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appjam_mainmenu(1).png"; sourceTree = "<group>"; };
@@ -176,6 +186,18 @@
 		5589D7381657B207009DD46B /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				55C1BDFA1659A85300701F4D /* appjam_milestone1.png */,
+				55C1BDFB1659A85300701F4D /* appjam_milestone2.png */,
+				55C1BDFC1659A85300701F4D /* appjam_milestone3.png */,
+				55C1BDFD1659A85300701F4D /* appjam_milestone4.png */,
+				55C1BDFE1659A85300701F4D /* appjam_milestone5.png */,
+				55C1BDFF1659A85300701F4D /* appjam_milestone6.png */,
+				55C1BE001659A85300701F4D /* appjam_milestone7.png */,
+				55C1BE011659A85300701F4D /* appjam_milestone8.png */,
+				55C1BE021659A85300701F4D /* appjam_milestone9.png */,
+				55C1BE031659A85300701F4D /* appjam_milestone10.png */,
+				55C1BE041659A85300701F4D /* appjam_milestone11.png */,
+				55C1BE051659A85300701F4D /* appjam_milestone12.png */,
 				55BD1AC61658A8C200421DE0 /* appjam_icon_72x72.png */,
 				5589D7081657B1CC009DD46B /* TorsoView_boy.png */,
 				5589D7091657B1CC009DD46B /* TorsoView_girl.png */,
@@ -183,13 +205,6 @@
 				5589D6F11657B1CC009DD46B /* LegView_girl.png */,
 				5589D6EC1657B1CC009DD46B /* HeadView_boy.png */,
 				5589D6ED1657B1CC009DD46B /* HeadView_girl.png */,
-				5589D6D91657B1CC009DD46B /* appjam_milestone1.png */,
-				5589D6DA1657B1CC009DD46B /* appjam_milestone2.png */,
-				5589D6DB1657B1CC009DD46B /* appjam_milestone3.png */,
-				5589D6DC1657B1CC009DD46B /* appjam_milestone4.png */,
-				5589D6DD1657B1CC009DD46B /* appjam_milestone5.png */,
-				5589D6DE1657B1CC009DD46B /* appjam_milestone6.png */,
-				5589D6DF1657B1CC009DD46B /* appjam_milestone7.png */,
 				5589D6E11657B1CC009DD46B /* BodyView_boy.png */,
 				5589D6E21657B1CC009DD46B /* BodyView_girl.png */,
 			);
@@ -285,13 +300,6 @@
 				5589D6B91657B158009DD46B /* InfoPlist.strings in Resources */,
 				5589D6C11657B158009DD46B /* Default.png in Resources */,
 				5589D6C51657B158009DD46B /* Default-568h@2x.png in Resources */,
-				5589D7141657B1CC009DD46B /* appjam_milestone1.png in Resources */,
-				5589D7151657B1CC009DD46B /* appjam_milestone2.png in Resources */,
-				5589D7161657B1CC009DD46B /* appjam_milestone3.png in Resources */,
-				5589D7171657B1CC009DD46B /* appjam_milestone4.png in Resources */,
-				5589D7181657B1CC009DD46B /* appjam_milestone5.png in Resources */,
-				5589D7191657B1CC009DD46B /* appjam_milestone6.png in Resources */,
-				5589D71A1657B1CC009DD46B /* appjam_milestone7.png in Resources */,
 				5589D71C1657B1CC009DD46B /* BodyView_boy.png in Resources */,
 				5589D71D1657B1CC009DD46B /* BodyView_girl.png in Resources */,
 				5589D7231657B1CC009DD46B /* HeadView_boy.png in Resources */,
@@ -305,6 +313,18 @@
 				55D548DE1659932800F6BDA2 /* appjam_mainmenu_button(1).png in Resources */,
 				55D548DF1659932800F6BDA2 /* appjam_mainmenu(1).png in Resources */,
 				55D548E01659932800F6BDA2 /* appjam_secondmenu(1).png in Resources */,
+				55C1BE061659A85300701F4D /* appjam_milestone1.png in Resources */,
+				55C1BE071659A85300701F4D /* appjam_milestone2.png in Resources */,
+				55C1BE081659A85300701F4D /* appjam_milestone3.png in Resources */,
+				55C1BE091659A85300701F4D /* appjam_milestone4.png in Resources */,
+				55C1BE0A1659A85300701F4D /* appjam_milestone5.png in Resources */,
+				55C1BE0B1659A85300701F4D /* appjam_milestone6.png in Resources */,
+				55C1BE0C1659A85300701F4D /* appjam_milestone7.png in Resources */,
+				55C1BE0D1659A85300701F4D /* appjam_milestone8.png in Resources */,
+				55C1BE0E1659A85300701F4D /* appjam_milestone9.png in Resources */,
+				55C1BE0F1659A85300701F4D /* appjam_milestone10.png in Resources */,
+				55C1BE101659A85300701F4D /* appjam_milestone11.png in Resources */,
+				55C1BE111659A85300701F4D /* appjam_milestone12.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

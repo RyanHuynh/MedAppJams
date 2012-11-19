@@ -59,4 +59,5 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *weightAvg;
 @property (strong,nonatomic) NSMutableDictionary *avgValue;
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
 @end

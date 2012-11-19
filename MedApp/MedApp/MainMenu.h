@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 - (IBAction)logOut:(id)sender;
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
 
 @end

@@ -18,8 +18,8 @@
 @synthesize ageData;
 @synthesize ageTextField;
 @synthesize pickerViewContainer;
-
-
+@synthesize bar;
+@synthesize image;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,13 +34,12 @@
 {
     [super viewDidLoad];
     
-    ageData = [[NSArray alloc] initWithObjects: @"0", @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
+    ageData = [[NSArray alloc] initWithObjects: @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
     pickerViewContainer.hidden = YES;
-    
-    //pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);
-    
-    
-	// Do any additional setup after loading the view.
+    if([[Model uniqueModel] logIn])
+    {
+            bar.topItem.title = [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"];
+    }
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -59,6 +58,7 @@
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [ageData count];
+    
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
@@ -71,19 +71,21 @@
 
 - (IBAction)showAge:(id)sender {
     pickerViewContainer.hidden = NO;
-//    [UIView beginAnimations:nil context:(NULL)];
-//    [UIView setAnimationDuration:0.3];
-//    pickerViewContainer.frame = CGRectMake(139, 109, 63, 235);
-//    [UIView commitAnimations];
+
     
 }
 
 - (IBAction)pickerDone:(id)sender {
     pickerViewContainer.hidden = YES;
-//    [UIView beginAnimations:nil context:(NULL)];
-//    [UIView setAnimationDuration:0.3];
-//    pickerViewContainer.frame = CGRectMake(800, 109, 63, 235);    [UIView commitAnimations];
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",@"appjam_milestone", ageTextField.text,@".png"];
+    NSLog(url);
+    image.image = [UIImage imageNamed:url];
     
 }
 
+- (void)viewDidUnload {
+    [self setImage:nil];
+    [self setBar:nil];
+    [super viewDidUnload];
+}
 @end

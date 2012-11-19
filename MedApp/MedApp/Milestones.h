@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Model.h";
 @interface Milestones : UIViewController
 
 <UIPickerViewDataSource, UIPickerViewDelegate>
@@ -23,6 +23,7 @@
 @property(nonatomic, retain) NSArray *ageData;
 
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 //@property (weak, nonatomic) IBOutlet UILabel *ageTextFieldLabel;
 
@@ -31,6 +32,7 @@
 //- (IBAction)tap:(id)sender;
 - (IBAction)showAge:(id)sender;
 - (IBAction)pickerDone:(id)sender;
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
 
 
 @end

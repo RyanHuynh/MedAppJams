@@ -43,6 +43,7 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *ipdAvg;
 @property (strong, nonatomic) IBOutlet UITextField *ocd;
 @property (strong, nonatomic) IBOutlet UILabel *ocdAvg;
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
 
 @property (strong, nonatomic) NSMutableDictionary *avgValue;
 //- (IBAction)tap:(id)sender;

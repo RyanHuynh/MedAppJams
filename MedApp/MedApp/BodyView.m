@@ -44,6 +44,7 @@
 @synthesize headLabel;
 @synthesize headChartB;
 @synthesize headChartG;
+@synthesize bar;
 static int weightModifier;
 static int heightModifier;
 
@@ -1148,6 +1149,10 @@ static int heightModifier;
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self checkGender];
+    if([[Model uniqueModel] logIn])
+    {
+        bar.topItem.title = [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"];
+    }
     weightType.text = [[Model uniqueModel] weightSetting];
     heightType.text = [[Model uniqueModel] heightSetting];
     weightModifier = [[Model uniqueModel] getWeightModifier];
@@ -1162,7 +1167,7 @@ static int heightModifier;
         weightChartUse= weightChartB;
         heightChartUse= heightChartB;
         headChartUse= headChartB;
-        NSLog(@"ii");
+       
     }
     else
     {
