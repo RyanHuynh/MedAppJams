@@ -65,6 +65,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *handLabel;
 @property (strong, nonatomic) IBOutlet UILabel *handAvg;
 
+@property (strong, nonatomic) IBOutlet UILabel *armSL;
+
 
 - (IBAction)prevMonth:(id)sender;
 

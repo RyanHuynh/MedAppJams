@@ -131,7 +131,7 @@ static int selectedMonth;
     neckLabel.text = [temp objectForKey:@"neck"];
     neckAvg.text = [temp objectForKey:@"neckAvg"];
     
-    NSLog([temp objectForKey:@"fingerR"]);
+  
    
     palmLabel.text = [temp objectForKey:@"palmR"];
    
@@ -147,15 +147,15 @@ static int selectedMonth;
     handLabel.text = [temp objectForKey:@"handR"];
     handAvg.text = [temp objectForKey:@"handAvg"];
     farmLabel.text = [temp objectForKey:@"fArmR"];
-     NSLog(@"TEST2");
+ 
     farmA.text = [temp objectForKey:@"fArmAvg"];
     uaLabel.text = [temp objectForKey:@"upArmR"];
     uaA.text = [temp objectForKey:@"upArmAvg"];
     armSLabel.text = [temp objectForKey:@"armSpan"];
     armSA.text = [temp objectForKey:@"armSpanAvg"];
     armLabel.text = [temp objectForKey:@"armR"];
-    armA.text = [temp objectForKey:@"armA"];
-    
+    armA.text = [temp objectForKey:@"armAvg"];
+
 }
 
 - (IBAction)prevMonth:(id)sender {
@@ -222,6 +222,7 @@ static int selectedMonth;
     [self setFingerLabel:nil];
     [self setScroll:nil];
 
+    [self setArmSL:nil];
     [super viewDidUnload];
 }
 @end

@@ -78,7 +78,7 @@
 - (IBAction)pickerDone:(id)sender {
     pickerViewContainer.hidden = YES;
     NSString *url = [NSString stringWithFormat:@"%@%@%@",@"appjam_milestone", ageTextField.text,@".png"];
-    NSLog(url);
+   
     image.image = [UIImage imageNamed:url];
     
 }

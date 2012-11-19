@@ -57,6 +57,10 @@ static int uniqueId;
         log = [[NSMutableDictionary alloc]init];
         [self createNewRecord:@"Ryan Awesome": 0];
         [self createNewRecord:@"Fantastic Xtina": 1];
+        [self createNewRecord:@"Bryan": 0];
+        [self createNewRecord:@"Eiling": 1];
+        [self createNewRecord:@"Demo_Boy": 0];
+        [self createNewRecord:@"Demo_Girl": 1];
         logIn = NO;
     }
     
@@ -105,6 +109,7 @@ static int uniqueId;
 {
     NSString *genderS, *idU;
     idU = [NSString stringWithFormat:@"%d", uniqueId];
+    loginID = idU;
     if (genderInput == 0) {
         genderS = @"Boy";
     }
@@ -154,6 +159,7 @@ static int uniqueId;
         [newRecord addObject:monthRecord];
     }
     [log setObject:newRecord forKey:[NSString stringWithFormat:@"%d", uniqueId]];
+    
     uniqueId++;
    
 }
@@ -374,6 +380,8 @@ static int uniqueId;
         
         
     }
+    
+    NSLog(armAvg);
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:armR forKey:@"armR" ];
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:armL forKey:@"armL" ];
     [[[log objectForKey:loginID] objectAtIndex:month] setObject:armAvg forKey:@"armAvg"];

@@ -19,6 +19,7 @@
 @synthesize ageTextField;
 @synthesize pickerViewContainer;
 @synthesize avgValue;
+@synthesize bar;
 //INIT
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +49,7 @@
         legImage.image = [UIImage imageNamed:@"LegView_boy"];
     else
         legImage.image = [UIImage imageNamed:@"LegView_girl"];
+    bar.topItem.title = [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,4 +114,20 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
         [self performSegueWithIdentifier:@"toLogIn" sender:nil];}
 }
 
+- (void)viewDidUnload {
+    [self setBar:nil];
+    [super viewDidUnload];
+}
+- (IBAction)updateRecord:(id)sender
+{
+    if(![[Model uniqueModel] logIn])
+        [self doAlert];
+    else
+    {
+        
+        [self showComfirmation];
+        
+    }
+
+}
 @end

@@ -69,11 +69,19 @@ titleForHeaderInSection:(NSInteger)section {
 }
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *test = [[[[[Model uniqueModel] log] objectForKey:[list objectAtIndex:[indexPath row]]]objectAtIndex:0]objectForKey:@"gender"];
     [[Model uniqueModel] setLogin:[list objectAtIndex:[indexPath row]]];
+    [[Model uniqueModel] changeGender:test];
     [self performSegueWithIdentifier:@"toMainMenu" sender:nil];
 }
 - (IBAction)createRecord:(id)sender {
     int genderID = gender.selectedSegmentIndex;
+    if(genderID == 0)
+    {
+        [[Model uniqueModel]changeGender:@"Boy"];
+    }
+    else
+         [[Model uniqueModel]changeGender:@"Girl"];
     [[Model uniqueModel]createNewRecord:name.text :genderID];
     [[Model uniqueModel] setLogin:[[Model uniqueModel] loginID]];
 }

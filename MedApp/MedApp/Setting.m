@@ -38,8 +38,8 @@
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog([[Model uniqueModel] weightSetting]);
-    if([[[Model uniqueModel] weightSetting] isEqualToString:@"(Kilogram)"]){ NSLog([[Model uniqueModel] weightSetting]);
+   
+    if([[[Model uniqueModel] weightSetting] isEqualToString:@"(Kilogram)"]){ 
         weightSetting.selectedSegmentIndex = 0;}
     else
         weightSetting.selectedSegmentIndex = 1;
@@ -53,7 +53,7 @@
     }
     else
         genderSC.selectedSegmentIndex = 1;
-    NSLog(@"END");
+    
 }
 
 
@@ -69,7 +69,7 @@
     {
         [[Model uniqueModel] changeWeightSetting:@"(Pound)"];
         [[Model uniqueModel] changeWeightModifier:0.453592];
-        NSLog(@"%f", weightSetting);
+      
     }
 
 }

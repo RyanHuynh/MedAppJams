@@ -18,6 +18,7 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *torsoImage;
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
 
 @property(nonatomic, retain) UIPickerView *agePicker;
 @property(nonatomic, retain) NSArray *ageData;

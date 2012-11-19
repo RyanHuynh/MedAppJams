@@ -18,7 +18,7 @@
 @synthesize ageData;
 @synthesize ageTextField;
 @synthesize pickerViewContainer;
-
+@synthesize bar;
 @synthesize armL;
 @synthesize armAvg;
 @synthesize upArmL;
@@ -217,6 +217,7 @@
     else
         torsoImage.image = [UIImage imageNamed:@"TorsoView_girl"];
     [self getAvgValue];
+    bar.topItem.title = [[[[[Model uniqueModel] log] objectForKey:[[Model uniqueModel] loginID]] objectAtIndex:0] objectForKey:@"name"];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -257,8 +258,7 @@
         chestAvg.text = [NSString stringWithFormat:@"%.1f",c];
         indAvg.text = [NSString stringWithFormat:@"%.1f",indT];
         
-    NSLog(@"%d",index);
-        //NSLog(heightAvg.text);
+   
     }
     
 
@@ -325,12 +325,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     {
         [[Model uniqueModel] torsoViewUpdate: armR.text: armL.text: armAvg.text: upArmR.text: upArmL.text:upArmAvg.text:handR.text:handL.text: handAvg.text: fArmR.text:fArmL.text: fArmAvg.text: palmR.text: palmL.text: palmAvg.text: fingerR.text: fingerL.text:fingerAvg.text:ind.text: indAvg.text: chest.text: chestAvg.text: armSpan.text: armSpanAvg.text: [ageTextField.text intValue]];
         [self showComfirmation];
-        
+       
     }
 }
 
 - (void)viewDidUnload {
     [self setFingerR:nil];
+    [self setBar:nil];
     [super viewDidUnload];
 }
 @end
